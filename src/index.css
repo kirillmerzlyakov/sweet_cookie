@@ -13,15 +13,31 @@ code {
 }
 
 @font-face {
-  font-family: "Mont";
-  src: url("./fonts/Mont/Mont-Regular.woff") format("woff");
+  font-family: "Value Sans Pro Regular";
+  src: url("./fonts/ValueSansPro/ValueSansProRegular.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "Mont Semi Bold";
-  src: url("./fonts/Mont/Mont-SemiBold.woff") format("woff");
+  font-family: "Value Sans Pro Bold";
+  src: url("./fonts/ValueSansPro/ValueSansProBold.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
+
+@font-face {
+  font-family: "Value Sans Pro Medium";
+  src: url("./fonts/ValueSansPro/ValueSansProMedium.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Value Sans Pro Black";
+  src: url("./fonts/ValueSansPro/ValueSansProBlack.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+
