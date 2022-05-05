@@ -1,0 +1,81 @@
+@import "../../components/shared.module.less";
+
+:local {
+  .menu {
+    font-family: Mont;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: @header-height;
+    left: 0;
+    width: @menu-width;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 20px 70px 20px 20px;
+    z-index: 10;
+  }
+
+  .descriptionCity {
+    margin-top: 6px;
+  }
+
+  .sourceLinkWrapper {
+    margin-top: 80px;
+  }
+
+  .sourceLink {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    text-decoration-line: underline;
+    color: @text-color-black;
+    text-decoration: underline;
+  }
+
+  .descriptionHeader {
+    font-family: Mont Semi Bold;
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .description {
+    margin-top: 60px;
+    overflow: hidden;
+  }
+
+  .author {
+    position: fixed;
+    color: #a5a3a9;
+    text-align: left;
+    left: 20px;
+    bottom: 40px;
+  }
+
+  @media screen and (max-width: 1300px) {
+    .sourceLinkWrapper {
+      margin-top: 30px;
+    }
+
+    .description {
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (max-width: 430px) {
+    .menu {
+      position: inherit;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      padding: 15px;
+      top: 0;
+      height: auto;
+      width: auto;
+    }
+
+    .author {
+      display: none;
+    }
+  }
+}

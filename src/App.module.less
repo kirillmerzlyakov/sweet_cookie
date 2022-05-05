@@ -1,0 +1,16 @@
+@import "./components/shared.module.less";
+
+:local {
+  .app {
+    display: flex;
+    flex-direction: column;
+    background-color: @bg-color;
+    color: @text-color-black;
+    min-height: 100vh;
+    min-width: 300px;
+  }
+
+  ::selection {
+    background: #e85211;
+  }
+}

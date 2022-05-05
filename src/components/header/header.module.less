@@ -1,0 +1,104 @@
+@import "../../components/shared.module.less";
+
+:local {
+  .header {
+    font-family: Mont;
+    display: flex;
+    position: fixed;
+    box-sizing: border-box;
+    padding: 15px 15px 0 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: @header-height;
+    text-align: center;
+    background-color: @bg-color;
+    color: @text-color-black;
+    font-size: 20px;
+    line-height: 26px;
+    z-index: 100;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: @menu-width;
+    padding: 0 15px;
+  }
+
+  .navigation .arrowSvg {
+    height: 6px;
+    width: 21px;
+    margin-right: 5px;
+    background: url("./arrow.svg") no-repeat 0px 0px;
+  }
+
+  .backText {
+    color: @text-color-black;
+  }
+
+  .name {
+    font-family: Mont Semi Bold;
+    display: flex;
+    flex-grow: 1;
+    min-width: 250px;
+    align-items: center;
+    text-align: left;
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .nameLink {
+    color: #222;
+    text-decoration: none;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 400px;
+    padding-right: 20px;
+  }
+
+  .button {
+    display: flex;
+    text-decoration: none;
+    color: @text-color-black;
+    padding-left: 30px;
+    cursor: pointer;
+  }
+
+  .navigateLink {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 430px) {
+    .header {
+      position: relative;
+    }
+
+    .navigation {
+      display: none;
+    }
+
+    .name {
+      align-items: flex-start;
+      padding-left: 15px;
+      min-width: 120px;
+    }
+
+    .buttons {
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding-right: 0px;
+      :first-child {
+        margin-bottom: 3px;
+      }
+    }
+  }
+}
