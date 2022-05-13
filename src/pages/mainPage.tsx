@@ -2,7 +2,7 @@ import React from "react";
 import { triangle, voiciaTitle } from "../media/mediaSVG";
 import { BlackBlock } from "./blackBlock";
 import s from "./mainPage.module.less";
-import cn from "classnames"
+import cn from "classnames";
 import { TariffBlock } from "./tariffBlock";
 
 export const MainPage: React.FC = () => (
@@ -18,7 +18,7 @@ export const MainPage: React.FC = () => (
           </div>
           <div className={s.buttons}>
             <div className={s.button}>собрать робота</div>
-            <div className={cn(s.button, s.button2)}>
+            <div className={cn(s.button, s.buttonWhite)}>
               {triangle()}&nbsp; познакомиться с voicia
             </div>
           </div>
@@ -33,6 +33,5 @@ export const MainPage: React.FC = () => (
     <div className={s.thirdBlock}></div>
     <BlackBlock />
     <TariffBlock />
-
   </div>
 );

@@ -42,7 +42,8 @@ export const TariffBlock: React.FC = () => (
         <div className={s.featuredescription}>с CRM-системой</div>
       </div>
     </div>
-
-    <div className={cn(s2.button, s.button1)}>заказать готовое решение</div>
+    <div className={s.buttons}>
+      <div className={s2.button}>заказать готовое решение</div>
+    </div>
   </div>
 );
