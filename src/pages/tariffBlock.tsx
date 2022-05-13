@@ -1,7 +1,6 @@
 import React from "react";
 import s from "./tariffBlock.module.less";
 import s2 from "./mainPage.module.less";
-import cn from "classnames";
 
 export const TariffBlock: React.FC = () => (
   <div className={s.tariffBlock}>

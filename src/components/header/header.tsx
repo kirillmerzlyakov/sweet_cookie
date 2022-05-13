@@ -1,28 +1,19 @@
 import React from "react";
-import cn from "./header.module.less";
-import { Link, useLocation } from "react-router-dom";
+import s from "./header.module.less";
 
 export const Header: React.FC = () => {
-  const { pathname } = useLocation();
   return (
-    <div className={cn.header}>
-      <div className={cn.left}>
-        <div className={cn.tile}>кейсы</div>
-        <div className={cn.tile}>области&nbsp;применения</div>
-        <div className={cn.tile}>с&nbsp;чего&nbsp;начать</div>
-        <div className={cn.tile}>тарифы</div>
-        <div className={cn.tile}>заказать&nbsp;разработку</div>
+    <div className={s.header}>
+      <div className={s.left}>
+        <div className={s.tile}>кейсы</div>
+        <div className={s.tile}>области&nbsp;применения</div>
+        <div className={s.tile}>с&nbsp;чего&nbsp;начать</div>
+        <div className={s.tile}>тарифы</div>
+        <div className={s.tile}>заказать&nbsp;разработку</div>
       </div>
       <>
-        <div className={cn.signIn}>войти</div>
+        <div className={s.signIn}>войти</div>
       </>
     </div>
   );
 };
-
-const renderBackArrow = () => (
-  <Link className={cn.navigateLink} to="/">
-    <div className={cn.arrowSvg}></div>
-    <span className={cn.backText}>Назад</span>
-  </Link>
-);
