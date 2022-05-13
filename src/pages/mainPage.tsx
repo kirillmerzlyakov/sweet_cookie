@@ -6,6 +6,7 @@ import cn from "classnames";
 import { TariffBlock } from "./tariff/tariffBlock";
 import { DevBlock } from "./development/devBlock";
 import { CompaniesBlock } from "./companies/companiesBlock";
+import { FormBlock } from "./form/formBlock";
 
 export const MainPage: React.FC = () => (
   <div className={s.mainPage}>
@@ -36,6 +37,7 @@ export const MainPage: React.FC = () => (
     <BlackBlock />
     <TariffBlock />
     <DevBlock />
-    <CompaniesBlock/>
+    <CompaniesBlock />
+    <FormBlock />
   </div>
 );
