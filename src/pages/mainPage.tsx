@@ -1,5 +1,6 @@
 import React from "react";
-import { triangle, voiciaTitle } from "../../media/mediaSVG";
+import { triangle, voiciaTitle } from "../media/mediaSVG";
+import { BlackBlock } from "./blackBlock";
 import cn from "./mainPage.module.less";
 
 export const MainPage: React.FC = () => (
@@ -28,5 +29,6 @@ export const MainPage: React.FC = () => (
     </div>
     <div className={cn.secondBlock}></div>
     <div className={cn.thirdBlock}></div>
+    <BlackBlock />
   </div>
 );
