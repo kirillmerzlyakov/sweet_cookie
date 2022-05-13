@@ -1,9 +1,10 @@
 import React from "react";
 import { triangle, voiciaTitle } from "../media/mediaSVG";
-import { BlackBlock } from "./blackBlock";
+import { BlackBlock } from "./black/blackBlock";
 import s from "./mainPage.module.less";
 import cn from "classnames";
-import { TariffBlock } from "./tariffBlock";
+import { TariffBlock } from "./tariff/tariffBlock";
+import { DevBlock } from "./development/devBlock";
 
 export const MainPage: React.FC = () => (
   <div className={s.mainPage}>
@@ -33,5 +34,6 @@ export const MainPage: React.FC = () => (
     <div className={s.thirdBlock}></div>
     <BlackBlock />
     <TariffBlock />
+    <DevBlock />
   </div>
 );
