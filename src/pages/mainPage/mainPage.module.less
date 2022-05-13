@@ -2,9 +2,94 @@
 
 :local {
   .mainPage {
+    font-family: Value Sans Pro Regular;
+  }
+  .firstBlock {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px 70px;
+    box-sizing: border-box;
+    background: no-repeat #b0d1fb url(./../../media/1.png) right bottom;
+  }
+
+  .titleWrapper {
+    position: absolute;
+    top: 144px;
+
+    // background-color: aquamarine;
+  }
+
+  .subtitle {
+    margin-top: 47px;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 120%;
+    letter-spacing: 1px;
+  }
+
+  .description1 {
+    font-size: 20px;
+    // background-color: bisque;
+    margin-top: 15px;
+    width: 428px;
+    line-height: 140%;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 73px;
+    font-size: 20px;
+  }
+
+  .button1 {
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 11px 22px;
+    border-radius: 100px;
+    line-height: 140%;
+    align-items: center;
+    background-color: #1d1d1b;
+    box-shadow: -1px 0px 0px #000000, 1px 0px 0px #000000, 0px -1px 0px #000000,
+      0px 3px 0px #000000;
+    color: #fff;
+    margin-right: 15px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .button2 {
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 11px 22px;
+    border-radius: 100px;
+    line-height: 140%;
+    align-items: center;
+    background-color: #fff;
+    color: #1D1D1B;
+    box-shadow: -1px 0px 0px #000000, 1px 0px 0px #000000, 0px -1px 0px #000000,
+      0px 3px 0px #000000;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .secondBlock {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background: no-repeat #B0D1FB url(./../../media/1.png) right bottom;
+    background-color: #fff;
+  }
+
+  .thirdBlock {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #efefef;
   }
 }
