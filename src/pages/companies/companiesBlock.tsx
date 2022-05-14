@@ -21,10 +21,22 @@ export const CompaniesBlock: React.FC = () => (
           <img src={SamokatImg} alt="Самокат"></img>
         </div>
         <div>
+          <img src={ElamaImg} alt="Elama"></img>
+        </div>
+        <div>
           <img src={KotImg} alt="Кот"></img>
         </div>
         <div>
+          <img src={FlowImg} alt="Flow"></img>
+        </div>
+        <div>
+          <img src={SamokatImg} alt="Самокат"></img>
+        </div>
+        <div>
           <img src={ElamaImg} alt="Elama"></img>
+        </div>
+        <div>
+          <img src={KotImg} alt="Кот"></img>
         </div>
         <div>
           <img src={FlowImg} alt="Flow"></img>
