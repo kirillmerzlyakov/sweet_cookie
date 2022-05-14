@@ -41,3 +41,18 @@ export const triangle = () => (
     />
   </svg>
 );
+
+export const triangleBig = (isWhite?: boolean) => (
+  <svg
+    width="31"
+    height="36"
+    viewBox="0 0 31 36"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M30.998 18L0.998045 35.3205L0.998047 0.67949L30.998 18Z"
+      fill={isWhite ? "#fff": "#1D1D1B"}
+    />
+  </svg>
+);

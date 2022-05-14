@@ -8,6 +8,7 @@ import { DevBlock } from "./development/devBlock";
 import { CompaniesBlock } from "./companies/companiesBlock";
 import { FormBlock } from "./form/formBlock";
 import { StepsBlock } from "./steps/stepsBlock";
+import { SecondBlock } from "./second/secondBlock";
 
 export const MainPage: React.FC = () => (
   <div className={s.mainPage}>
@@ -33,7 +34,7 @@ export const MainPage: React.FC = () => (
         </div>
       </div>
     </div>
-    <div className={s.secondBlock}></div>
+    <SecondBlock/>
     <div className={s.thirdBlock}></div>
     <StepsBlock />
     <BlackBlock />

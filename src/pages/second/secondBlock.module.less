@@ -1,0 +1,174 @@
+:local {
+  .tariffBlock {
+    padding: 76px 70px;
+    box-sizing: border-box;
+    // height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 55px;
+    font-size: 50px;
+  }
+
+  .textBlue {
+    color: #b0d1fb;
+  }
+
+  .subtitle {
+    margin: 15px auto 0 auto;
+    text-align: center;
+    width: 679px;
+    font-size: 20px;
+    line-height: 140%;
+    color: #1d1d1b;
+  }
+
+  .wrapperSteps {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 76px;
+    justify-content: center;
+  }
+
+  .step {
+    width: 630px;
+    height: 560px;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 50px;
+    border: #1d1d1b 1px solid;
+    margin: 0 40px 40px 0;
+    padding: 50px 40px;
+    box-shadow: -1px 0px 0px #000000, 1px 0px 0px #000000, 0px -1px 0px #000000,
+      0px 3px 0px #000000;
+
+    &:hover {
+      .play {
+        // display: block;
+        visibility: visible;
+      }
+    }
+  }
+
+  .step2 {
+    background-color: #b0d1fb;
+  }
+  .step3 {
+    color: #fff;
+    background-color: #1d1d1b;
+  }
+
+  .stepTitle {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 120%;
+  }
+
+  .stepdescription {
+    font-size: 20px;
+    margin-top: 15px;
+    line-height: 28px;
+  }
+  .stepTitleMega {
+    position: absolute;
+    width: 216px;
+    height: 187px;
+    color: #fff;
+    top: -60px;
+    left: 90px;
+    font-size: 170px;
+    font-weight: 700;
+    line-height: 110%;
+    // border: 15px solid #FFFFFF;
+    text-shadow: -1px 0px 0px #000000, 1px 0px 0px #000000, 0px -1px 0px #000000,
+      0px 3px 0px #000000;
+    text-align: center;
+    letter-spacing: 10px;
+  }
+
+  .img1 {
+    position: absolute;
+    bottom: 0;
+    right: -50px;
+  }
+
+  .img2 {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+  }
+
+  .itemsWrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 400px;
+    bottom: 20px;
+    // background-color: aqua;
+  }
+
+  .item {
+    width: 130px;
+    margin-bottom: 30px;
+  }
+
+  .itemTitle {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 120%;
+  }
+
+  .itemSmall {
+    width: 130px;
+
+    margin-bottom: 30px;
+    opacity: 0.6;
+  }
+
+  .itemSmallTitle {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 120%;
+  }
+
+  .itemSubtitle {
+    font-size: 12px;
+    line-height: 110%;
+    width: 124px;
+  }
+
+  .play {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 50px;
+    right: 50px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: -1px 0px 0px #000000, 1px 0px 0px #000000, 0px -1px 0px #000000,
+      0px 3px 0px #000000;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .playWhite {
+    box-shadow: -1px 0px 0px #fff, 1px 0px 0px #fff, 0px -1px 0px #fff,
+    0px 3px 0px #fff;
+  }
+}
