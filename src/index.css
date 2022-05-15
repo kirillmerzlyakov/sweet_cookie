@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+.app {
+  font-family: Value Sans Pro Regular;
+}
+
 @font-face {
   font-family: "Value Sans Pro Regular";
   src: url("./fonts/ValueSansPro/ValueSansProRegular.woff") format("woff");

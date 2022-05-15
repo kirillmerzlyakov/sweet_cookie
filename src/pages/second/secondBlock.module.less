@@ -2,13 +2,26 @@
 
 :local {
   .tariffBlock {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    
+    // width: 100%;
+    // padding: 76px 70px;
+    // box-sizing: border-box;
+    // background-color: aqua;
+
+
+
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    min-width: 1080px;
     padding: 76px 70px;
     box-sizing: border-box;
-    // height: 100vh;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    // background-color: @blue;
   }
 
   .title {
@@ -38,10 +51,12 @@
     flex-direction: row;
     margin-top: 76px;
     justify-content: center;
+    width: 100%;
   }
 
   .step {
-    width: 630px;
+    width: 45%;
+    min-width: 630px;
     height: 560px;
     position: relative;
     box-sizing: border-box;

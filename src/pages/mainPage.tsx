@@ -34,7 +34,7 @@ export const MainPage: React.FC = () => (
       </div>
     </div>
     <SecondBlock/>
-    <div className={s.thirdBlock}></div>
+    {/* <div className={s.thirdBlock}></div> */}
     <StepsBlock />
     <BlackBlock />
     <TariffBlock />
