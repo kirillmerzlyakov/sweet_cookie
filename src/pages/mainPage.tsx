@@ -4,7 +4,6 @@ import { BlackBlock } from "./black/blackBlock";
 import s from "./mainPage.module.less";
 import cn from "classnames";
 import { TariffBlock } from "./tariff/tariffBlock";
-import { DevBlock } from "./development/devBlock";
 import { CompaniesBlock } from "./companies/companiesBlock";
 import { FormBlock } from "./form/formBlock";
 import { StepsBlock } from "./steps/stepsBlock";
@@ -39,7 +38,6 @@ export const MainPage: React.FC = () => (
     <StepsBlock />
     <BlackBlock />
     <TariffBlock />
-    <DevBlock />
     <CompaniesBlock />
     <FormBlock />
   </div>
