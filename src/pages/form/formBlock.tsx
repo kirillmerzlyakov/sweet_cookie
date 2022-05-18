@@ -44,7 +44,7 @@ export const FormBlock: React.FC = () => (
       </div>
 
       <div className={s.buttons}>
-        <div className={cn(s1.button, s.button)}>заказать готовое решение</div>
+        <div className={cn(s1.button, s.button)}>отправить</div>
       </div>
     </div>
   </div>

@@ -2,26 +2,22 @@
 
 :local {
   .tariffBlock {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    
-    // width: 100%;
-    // padding: 76px 70px;
-    // box-sizing: border-box;
-    // background-color: aqua;
-
-
-
     display: flex;
     position: relative;
     flex-direction: column;
     min-height: 100vh;
     width: 100%;
     min-width: 1080px;
-    padding: 76px 70px;
+    padding-top: 76px;
+    padding-bottom: 76px;
     box-sizing: border-box;
-    // background-color: @blue;
+    background-image: linear-gradient(
+      to bottom,
+      #fff 50%,
+      #efefef 50%,
+      #efefef 100%,
+      #fff 100%
+    );
   }
 
   .title {
@@ -186,6 +182,6 @@
 
   .playWhite {
     box-shadow: -1px 0px 0px #fff, 1px 0px 0px #fff, 0px -1px 0px #fff,
-    0px 3px 0px #fff;
+      0px 3px 0px #fff;
   }
 }
