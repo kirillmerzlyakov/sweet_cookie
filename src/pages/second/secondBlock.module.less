@@ -2,6 +2,7 @@
 
 :local {
   .tariffBlock {
+    .mainBlock;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -51,7 +52,7 @@
   }
 
   .step {
-    width: 45%;
+    width: 30%;
     min-width: 630px;
     height: 560px;
     position: relative;
@@ -183,5 +184,24 @@
   .playWhite {
     box-shadow: -1px 0px 0px #fff, 1px 0px 0px #fff, 0px -1px 0px #fff,
       0px 3px 0px #fff;
+  }
+
+  .buttons {
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #fff;
+    color: @black;
   }
 }

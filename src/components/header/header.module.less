@@ -2,19 +2,32 @@
 
 :local {
   .header {
-    position: fixed;
+    position: absolute;
     display: flex;
+    width: 100%;
     justify-content: space-between;
     top: 0;
     left: 0;
     font-family: Value Sans Pro Regular;
     box-sizing: border-box;
     padding: 15px 70px;
-    width: 100vw;
     color: @black;
     font-size: 20px;
     line-height: 26px;
     z-index: 100;
+    transition: all 0.3s ease;
+  }
+
+  .headerFixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+
+  }
+
+  .headerWhite {
+    background-color: #fff;
   }
 
   .left {
@@ -41,13 +54,12 @@
     box-shadow: -1px 0px 0px #000000, 1px 0px 0px #000000, 0px -1px 0px #000000,
       0px 3px 0px #000000;
     color: #fff;
-    .hover
+    .hover;
   }
 
   .tile {
     height: 28px;
     margin-right: 40px;
-    .hover
+    .hover;
   }
-
 }

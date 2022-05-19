@@ -86,6 +86,9 @@ export const SecondBlock: React.FC = () => (
         </div>
         <div className={cn(s.play, s.playWhite)}>{triangleBig(true)}</div>
       </div>
+      <div className={s.buttons}>
+        <div className={cn(s2.button, s.button)}>больше кейсов</div>
+      </div>
     </div>
   </div>
 );
