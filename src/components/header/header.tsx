@@ -7,7 +7,7 @@ export const Header: React.FC = () => {
     var scrollPrev = 0;
     var hand = function () {
       const scrolled = document.documentElement.scrollTop;
-      if (scrolled % 10 !== 0) return;
+      // if (scrolled % 10 !== 0) return;
       if (scrolled < scrollPrev && scrolled > 1) {
         headerRef?.current?.classList.add(s.headerFixed);
         console.log("add fix");
