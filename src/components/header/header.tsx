@@ -7,18 +7,11 @@ export const Header: React.FC = () => {
     var scrollPrev = 0;
     var hand = function () {
       const scrolled = document.documentElement.scrollTop;
-      // if (scrolled % 10 !== 0) return;
-      if (scrolled < scrollPrev && scrolled > 1) {
-        headerRef?.current?.classList.add(s.headerFixed);
-        console.log("add fix");
-      } else {
-        headerRef?.current?.classList.remove(s.headerFixed);
-        console.log("remove fix");
-      }
-
+      scrolled < scrollPrev && scrolled > 1
+        ? headerRef?.current?.classList.add(s.headerFixed)
+        : headerRef?.current?.classList.remove(s.headerFixed);
       scrollPrev = scrolled;
     };
-
     window.addEventListener("scroll", hand);
   }, []);
   return (

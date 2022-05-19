@@ -6,6 +6,10 @@ import cn from "classnames";
 import Img1 from "../../media/man1.png";
 import Img2 from "../../media/man2.png";
 import { triangleBig } from "../../media/mediaSVG";
+import { Slider } from "../../components/slider/Slider";
+
+import Slide1 from "../../media/slider/1.png";
+import Slide2 from "../../media/slider/2.png";
 
 export const SecondBlock: React.FC = () => (
   <div className={s.tariffBlock}>
@@ -90,6 +94,8 @@ export const SecondBlock: React.FC = () => (
         <div className={cn(s2.button, s.button)}>больше кейсов</div>
       </div>
     </div>
+
+    <Slider slides={[Slide1, Slide2]} />
   </div>
 );
 
