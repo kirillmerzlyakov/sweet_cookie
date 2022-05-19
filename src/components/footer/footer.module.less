@@ -1,7 +1,78 @@
+@import "../../components/shared.module.less";
+
 :local {
   .footer {
+    position: relative;
+    background-color: @black;
     display: flex;
-    height: 40px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 260px;
+    color: @white;
+    padding: 60px 60px 20px 70px;
+    background-image: url(./../../media/voicia_footer_bg.png);
+    background-position: bottom 0 right 70px;
+    background-repeat: no-repeat;
+  }
+
+  .textBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .text1 {
+    margin-bottom: 54px;
+  }
+
+  .text2 {
+    font-weight: 700;
+    font-size: 25px;
+    font-style: normal;
+    width: 403px;
+    line-height: 110%;
+  }
+
+  .textBlue {
+    color: @blue;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-left: 50px;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .navItem {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+  }
+
+  .logoText {
+    text-align: right;
+    line-height: 140%;
+  }
+
+  .img {
+    position: absolute;
+    bottom: 0;
+    right: 350px
   }
 
   @media screen and (max-width: 430px) {
