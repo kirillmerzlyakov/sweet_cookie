@@ -4,11 +4,51 @@ import cn from "classnames";
 import leftArrow from "./icons/left.svg";
 import rightArrow from "./icons/right.svg";
 
-interface SliderProps {
-  slides: string[];
+import Slide1 from "../../media/slider/1.png";
+import Slide2 from "../../media/slider/2.png";
+
+interface Slide {
+  img: string;
+  subtitle: string;
+  text: string;
 }
 
-export const Slider: React.FC<SliderProps> = ({ slides }) => {
+const slides: Slide[] = [
+  {
+    img: Slide1,
+    subtitle: "Работа с холодными звонками",
+    text: "Прозвонит холодную базу и соберет заявки с качеством, схожим с качеством колл-центра. С любой скоростью и любым объемом.",
+  },
+  {
+    img: Slide2,
+    subtitle: "Работа с входящими заявками и их квалификация.",
+    text: "Робот самостоятельно обработает входящую заявку, квалифицирует лид, договорится о встречезвонке или сам отправит КП. Экономит до 90% времени ваших операторов.",
+  },
+  {
+    img: Slide1,
+    subtitle: "Автоматизация сервисных звонков",
+    text: "Самостоятельно напомнит о вебинаре, конференции, встрече или предстоящей консультации. Обзвонит не оплативших и отвалившихся клиентов и закроет возражения.",
+  },
+  {
+    img: Slide2,
+    subtitle: "Консультация клиентов",
+    text: "Отвечает на повторяющиеся вопросы клиентов с использованием актуальных данных из ваших CRM или баз данных.",
+  },
+  {
+    img: Slide1,
+    subtitle: "Опросы и исследования.",
+    text: "Проведет массовое исследование любой сложности в краткие сроки в формате диалога, как “настоящий человек”.",
+  },
+  {
+    img: Slide1,
+    subtitle: "Массовый подбор персонала.",
+    text: "Проведет скрининг резюме и первичные собеседования. Прозвонит холодную базу соискателей и заинтересует вакансией. Voicia заберет месяцы рутинных работ у вашего hr’а.",
+  },
+];
+
+interface SliderProps {}
+
+export const Slider: React.FC<SliderProps> = (props) => {
   const [slideIndex, setSlideIndex] = useState(1);
 
   const nextSlide = () => {
@@ -25,22 +65,41 @@ export const Slider: React.FC<SliderProps> = ({ slides }) => {
 
   return (
     <div className={s.containerSlider}>
-      {slides.map((src, i) => (
-        <div
-          key={src}
-          className={slideIndex === i + 1 ? cn(s.slide, s.activeAnim) : s.slide}
-        >
-          <img src={src} alt="картинка" />
+      <div className={s.left}>
+        {slides.map((slide, i) => (
+          <div
+            key={slide.subtitle}
+            className={
+              slideIndex === i + 1 ? cn(s.slide, s.activeAnim) : s.slide
+            }
+          >
+            <img src={slide.img} alt="картинка" />
+          </div>
+        ))}
+      </div>
+      <div className={s.right}>
+        <div className={s.title}>
+          <b>
+            <span className={s.blueText}>знакомьтесь: voicia – </span>
+            интеллектуальный <br />
+            голосовой робот
+          </b>
         </div>
-      ))}
+        <div className={s.subtitle}>
+          <b>{slides[slideIndex - 1].subtitle}</b>
+        </div>
+        <div className={s.text}>{slides[slideIndex - 1].text}</div>
+      </div>
+
       <BtnSlider moveSlide={nextSlide} direction={"next"} />
       <BtnSlider moveSlide={prevSlide} direction={"prev"} />
 
       <div className={s.dots}>
-        {slides.map((src, i) => (
+        {slides.map((slide, i) => (
           <div
-            key={src}
+            key={slide.subtitle}
             className={cn(s.dot, i + 1 === slideIndex && s.activeDot)}
+            onClick={() => setSlideIndex(i + 1)}
           ></div>
         ))}
       </div>
