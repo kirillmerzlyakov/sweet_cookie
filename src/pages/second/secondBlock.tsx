@@ -49,6 +49,7 @@ export const SecondBlock: React.FC = () => (
           {renderItem("30 000", "звонков/день")}
           {renderItem("180₽", "цена заявки")}
         </div>
+        <div className={cn(s.play)}>{triangleBig()}</div>
       </div>
 
       <div className={cn(s.step)}>
@@ -68,6 +69,7 @@ export const SecondBlock: React.FC = () => (
           {renderItem("6000", "звонков за полчаса")}
           {renderItem("19%", "процент конверсии")}
         </div>
+        <div className={cn(s.play)}>{triangleBig()}</div>
       </div>
 
       <div className={cn(s.step, s.step3)}>
