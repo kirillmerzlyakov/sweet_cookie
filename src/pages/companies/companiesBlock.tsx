@@ -6,8 +6,10 @@ import KotImg from "./../../media/kot.png";
 import ElamaImg from "./../../media/elama.png";
 import FlowImg from "./../../media/flow.png";
 
+export const COMPANIES_BLOCK_ID = "second-block-id";
+
 export const CompaniesBlock: React.FC = () => (
-  <div className={s.compBlock}>
+  <div className={s.compBlock} id={COMPANIES_BLOCK_ID}>
     <div className={s.blockWrapper}>
       50+ компаний уже подключили voicia <br />
       <span className={s.blueText}>

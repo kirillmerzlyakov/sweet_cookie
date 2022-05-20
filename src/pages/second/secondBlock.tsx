@@ -2,14 +2,15 @@ import React from "react";
 import s from "./secondBlock.module.less";
 import s2 from "../mainPage.module.less";
 import cn from "classnames";
-
 import Img1 from "../../media/man1.png";
 import Img2 from "../../media/man2.png";
 import { triangleBig } from "../../media/mediaSVG";
 import { Slider } from "../../components/slider/Slider";
 
+export const SECOND_BLOCK_ID = "second-block-id";
+
 export const SecondBlock: React.FC = () => (
-  <div className={s.tariffBlock}>
+  <div className={s.tariffBlock} id={SECOND_BLOCK_ID}>
     <div className={s.wrapperSteps}>
       <div className={cn(s.step, s.step2)}>
         <div className={s.stepTitle}>

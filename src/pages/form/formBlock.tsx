@@ -3,8 +3,10 @@ import cn from "classnames";
 import s from "./formBlock.module.less";
 import s1 from "../mainPage.module.less";
 
+export const FORM_BLOCK_ID = "form-block-id";
+
 export const FormBlock: React.FC = () => (
-  <div className={s.tariffBlock}>
+  <div className={s.tariffBlock} id={FORM_BLOCK_ID}>
     <div className={s.blockWrapper}>
       <div className={s.title}>
         Расскажите о своем проекте, а мы поможем усовершенствовать его при

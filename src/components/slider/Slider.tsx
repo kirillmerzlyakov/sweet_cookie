@@ -7,6 +7,8 @@ import rightArrow from "./icons/right.svg";
 import Slide1 from "../../media/slider/1.png";
 import Slide2 from "../../media/slider/2.png";
 
+export const SLIDER_BLOCK_ID = "slider-block-id";
+
 interface Slide {
   img: string;
   subtitle: string;
@@ -64,7 +66,7 @@ export const Slider: React.FC<SliderProps> = (props) => {
   };
 
   return (
-    <div className={s.containerSlider}>
+    <div className={s.containerSlider} id={SLIDER_BLOCK_ID}>
       <div className={s.left}>
         {slides.map((slide, i) => (
           <div

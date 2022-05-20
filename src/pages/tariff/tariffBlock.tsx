@@ -5,8 +5,10 @@ import s2 from "../mainPage.module.less";
 
 import cn from "classnames";
 
+export const TARIFF_BLOCK_ID = "tariff-block-id";
+
 export const TariffBlock: React.FC = () => (
-  <div className={s.tariffBlock}>
+  <div className={s.tariffBlock} id={TARIFF_BLOCK_ID}>
     <div className={s.title}>тарифы voicia</div>
     <div className={s.subtitle}>
       На запуск Voicia под ваши задачи нам понадобится <br />

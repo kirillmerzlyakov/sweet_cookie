@@ -1,10 +1,11 @@
 import React from "react";
 import s from "./stepsBlock.module.less";
-import s2 from "../mainPage.module.less";
 import cn from "classnames";
 
+export const STEPS_BLOCK_ID = "steps-block-id";
+
 export const StepsBlock: React.FC = () => (
-  <div className={s.tariffBlock}>
+  <div className={s.tariffBlock} id={STEPS_BLOCK_ID}>
     <div className={s.title}>
       <span className={s.textBlue}>от звонка до звонка</span>
       <br /> с чего начать?
@@ -38,7 +39,9 @@ export const StepsBlock: React.FC = () => (
         </div>
       </div>
       <div className={cn(s.step, s.step3)}>
-        <div className={s.stepTitleMega}><span className={s.border}>03</span></div>
+        <div className={s.stepTitleMega}>
+          <span className={s.border}>03</span>
+        </div>
 
         <div className={s.stepTitle}>запуск и получение первых результатов</div>
         <div className={s.stepdescription}>
