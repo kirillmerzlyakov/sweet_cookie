@@ -1,30 +1,37 @@
 import { voiciaFooter } from "../../media/mediaSVG";
-import cn from "./footer.module.less";
+import { scrollTo } from "../shared";
+
+import s from "./footer.module.less";
 
 import RobotImg from "../../media/robot_footer.png";
+import { SECOND_BLOCK_ID } from "../../pages/second/secondBlock";
+import { SLIDER_BLOCK_ID } from "../slider/Slider";
+import { STEPS_BLOCK_ID } from "../../pages/steps/stepsBlock";
+import { TARIFF_BLOCK_ID } from "../../pages/tariff/tariffBlock";
+import { FORM_BLOCK_ID } from "../../pages/form/formBlock";
 
 export const Footer = () => (
-  <div className={cn.footer}>
-    <div className={cn.textBlock}>
-      <div className={cn.text1}>{voiciaFooter()}</div>
-      <div className={cn.text2}>
+  <div className={s.footer}>
+    <div className={s.textBlock}>
+      <div className={s.text1}>{voiciaFooter()}</div>
+      <div className={s.text2}>
         <b>
-          <span className={cn.textBlue}>снизьте издержки</span> на поддержку
+          <span className={s.textBlue}>снизьте издержки</span> на поддержку
           клиентов и продаже до –50%
         </b>
       </div>
     </div>
 
-    <div className={cn.right}>
-      <div className={cn.nav}>
-        <div className={cn.navItem}>кейсы</div>
-        <div className={cn.navItem}>области&nbsp;применения</div>
-        <div className={cn.navItem}>с&nbsp;чего&nbsp;начать</div>
-        <div className={cn.navItem}>тарифы</div>
-        <div className={cn.navItem}>заказать&nbsp;разработку</div>
+    <div className={s.right}>
+      <div className={s.nav}>
+        {renderTile(<>кейсы</>, SECOND_BLOCK_ID)}
+        {renderTile(<>области&nbsp;применения</>, SLIDER_BLOCK_ID)}
+        {renderTile(<>с&nbsp;чего&nbsp;начать</>, STEPS_BLOCK_ID)}
+        {renderTile(<>тарифы</>, TARIFF_BLOCK_ID)}
+        {renderTile(<>заказать&nbsp;разработку</>, FORM_BLOCK_ID)}
       </div>
-      <div className={cn.logo}>
-        <div className={cn.logoText}>
+      <div className={s.logo}>
+        <div className={s.logoText}>
           Политика конфеденциальности
           <br />
           ©voicia, 2022
@@ -32,8 +39,14 @@ export const Footer = () => (
         <div></div>
       </div>
     </div>
-    <div className={cn.img}>
+    <div className={s.img}>
       <img src={RobotImg} alt=""></img>
     </div>
+  </div>
+);
+
+const renderTile = (title: JSX.Element, id: string) => (
+  <div className={s.navItem} onClick={() => scrollTo(id)}>
+    {title}
   </div>
 );

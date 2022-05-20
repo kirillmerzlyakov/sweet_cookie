@@ -50,13 +50,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    // width: 100%;
   }
 
   .navItem {
     color: rgba(255, 255, 255, 0.5);
     font-weight: 400;
     font-size: 20px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .logo {
@@ -73,7 +75,7 @@
   .img {
     position: absolute;
     bottom: 0;
-    right: 350px
+    right: 350px;
   }
 
   @media screen and (max-width: 430px) {

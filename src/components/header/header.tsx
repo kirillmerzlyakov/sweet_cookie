@@ -4,20 +4,21 @@ import { SECOND_BLOCK_ID } from "../../pages/second/secondBlock";
 import { STEPS_BLOCK_ID } from "../../pages/steps/stepsBlock";
 import { TARIFF_BLOCK_ID } from "../../pages/tariff/tariffBlock";
 import { SLIDER_BLOCK_ID } from "../slider/Slider";
+import { scrollTo } from "../shared";
 import s from "./header.module.less";
 
 export const Header: React.FC = () => {
   const headerRef = React.useRef<HTMLHeadingElement>(null);
   React.useEffect(() => {
     var scrollPrev = 0;
-    var hand = function () {
+    const onScroll = function () {
       const scrolled = document.documentElement.scrollTop;
       scrolled < scrollPrev && scrolled > 1
         ? headerRef?.current?.classList.add(s.headerFixed)
         : headerRef?.current?.classList.remove(s.headerFixed);
       scrollPrev = scrolled;
     };
-    window.addEventListener("scroll", hand);
+    window.addEventListener("scroll", onScroll);
   }, []);
 
   return (
@@ -41,6 +42,3 @@ const renderTile = (title: JSX.Element, id: string) => (
     {title}
   </div>
 );
-
-const scrollTo = (id: string) =>
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
