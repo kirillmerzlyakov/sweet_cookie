@@ -22,8 +22,15 @@ export const SecondBlock: React.FC = () => (
         <div className={s.itemsWrapper}>
           <div className={s.row}>
             {renderSmallItem("600", <>звонков/день 3&nbsp;менеджера</>)}
-            {renderSmallItem("22%", <>процент&nbsp;конверсии</>)}
-            {renderSmallItem("32₽", "цена одного участника вебинара")}
+            {renderSmallItem(
+              "22%",
+              <>
+                процент
+                <br />
+                конверсии
+              </>
+            )}
+            {renderSmallItem("32₽", "цена участника вебинара")}
           </div>
           <div className={s.row}>
             {renderItem(
@@ -42,7 +49,7 @@ export const SecondBlock: React.FC = () => (
                 конверсии
               </>
             )}
-            {renderItem("19₽", "цена одного участника вебинара")}
+            {renderItem("19₽", "цена участника вебинара")}
           </div>
         </div>
 
@@ -66,7 +73,13 @@ export const SecondBlock: React.FC = () => (
             {renderSmallItem("410₽", "цена заявки")}
           </div>
           <div className={s.row}>
-            {renderItem("30 000", "звонков/день")}
+            {renderItem(
+              "30000",
+              <>
+                звонков/день
+                <br />1 робот
+              </>
+            )}
             {renderItem("180₽", "цена заявки")}
           </div>
         </div>
@@ -86,20 +99,16 @@ export const SecondBlock: React.FC = () => (
         </div>
         <div className={s.itemsWrapper}>
           <div className={s.row}>
-            {renderSmallItem("8%", "конверсия в соискателя на поиске")}
+            {renderSmallItem("8%", <>конверсия в соискателя на&nbsp;поиске</>)}
             {renderSmallItem("2000", "звонков/день 10 менеджеров")}
           </div>
           <div className={s.row}>
-            {renderItem("10%", "конверсия в соискателя на поиске")}
+            {renderItem("10%", <>конверсия в соискателя на&nbsp;поиске</>)}
             <div className={s.checkTextWrapper}>
               <div className={s.checkItem}>
-                <div className={s.check}>{check()}</div>
-                <div>масштабировали исходящие звонки</div>
-              </div>
-              <div className={s.checkItem}>
-                <div className={s.check}>{check()}</div>
                 <div>
-                  автоматическая квалификация соискателя по типу курьер на
+                  <br />
+                  автоматическая квалификация соискателя по&nbsp;типу курьер на
                   велосипеде или курьер на авто
                 </div>
               </div>
@@ -128,7 +137,7 @@ export const SecondBlock: React.FC = () => (
                 конверсии
               </>
             )}
-            {renderSmallItem("32₽", "цена одного участника вебинара")}
+            {renderSmallItem("32₽", "цена участника вебинара")}
           </div>
           <div className={s.row}>
             {renderItem(
@@ -147,7 +156,7 @@ export const SecondBlock: React.FC = () => (
                 конверсии
               </>
             )}
-            {renderItem("19₽", "цена одного участника вебинара")}
+            {renderItem("19₽", "цена участника вебинара")}
           </div>
         </div>
         <div className={cn(s.play, s.playWhite)}>{triangleBig(true)}</div>
