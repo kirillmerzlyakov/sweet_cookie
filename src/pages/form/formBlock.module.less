@@ -22,6 +22,8 @@
   }
 
   .title {
+    .mediumText;
+
     width: 580px;
     color: @black;
     font-weight: 700;
@@ -34,8 +36,7 @@
   }
 
   .textBlue {
-    color: #7CB2F8;
-
+    color: #7cb2f8;
   }
 
   a {
@@ -62,14 +63,21 @@
 
     width: 630px;
     height: 60px;
-
     background: #ffffff;
     box-shadow: -1px 0px 0px #000000, 1px 0px 0px #000000, 0px -1px 0px #000000,
       0px 3px 0px #000000;
     border-radius: 20px;
   }
 
+  input,
+  textarea {
+    font-family: Value Sans Pro Regular;
+    color: @black;
+    border: none;
+  }
+
   .textarea {
+    padding-top: 20px;
     height: 161px;
   }
 
@@ -80,15 +88,11 @@
   }
 
   .checkbox {
-    border-radius: 50%;
     margin-right: 20px;
     width: 20px;
     height: 20px;
-    left: 740px;
-    top: 7199px;
-
     background: #ffffff;
-    border-radius: 30px;
+    border-radius: 100%;
   }
 
   .checkboxRow {

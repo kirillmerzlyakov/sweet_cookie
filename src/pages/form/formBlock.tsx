@@ -10,7 +10,7 @@ export const FormBlock: React.FC = () => (
     <div className={s.blockWrapper}>
       <div className={s.title}>
         Расскажите о своем проекте, а мы поможем усовершенствовать его при
-        помощи voicia. Заполните форму ниже или напишите нам на почту &nbsp;
+        помощи Voicia. Заполните форму ниже или напишите нам на почту &nbsp;
         <a href="mailto: info@voicia.ru">
           <span className={s.textBlue}>info@voicia.ru</span>
         </a>
