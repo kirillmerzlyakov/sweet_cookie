@@ -42,7 +42,7 @@ export const FormBlock: React.FC = () => (
             type={"checkbox"}
           ></input>
           <div className={s.checkboxDescription}>
-            Даю согласие на <b>обработку персональных данных</b>
+            Даю согласие на <span className={s.boldText}>обработку персональных данных</span>
           </div>
         </div>
       </div>
