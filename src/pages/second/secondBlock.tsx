@@ -3,7 +3,7 @@ import s from "./secondBlock.module.less";
 import cn from "classnames";
 import Img1 from "../../media/man1.png";
 import Img2 from "../../media/man2.png";
-import { arrowDown, check, triangleBig } from "../../media/mediaSVG";
+import { arrowDown, triangleBig } from "../../media/mediaSVG";
 import { Slider } from "../../components/slider/Slider";
 
 export const SECOND_BLOCK_ID = "second-block-id";
@@ -60,7 +60,7 @@ export const SecondBlock: React.FC = () => (
         <div className={s.stepTitle}>
           Лидогенерация холодной базы для Агентства Недвижимости
         </div>
-        <div className={s.stepdescription} style={{ width: "336px" }}>
+        <div className={s.stepdescription}>
           Заменили первую линию колл-центра и снизили стоимость заявки на 33%
         </div>
         <div className={s.img1}>
