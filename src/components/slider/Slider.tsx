@@ -4,6 +4,7 @@ import cn from "classnames";
 import leftArrow from "./icons/left.svg";
 import rightArrow from "./icons/right.svg";
 import SlideImg from "../../media/slider/3.png";
+import { triangleMedium } from "../../media/mediaSVG";
 
 export const SLIDER_BLOCK_ID = "slider-block-id";
 
@@ -123,6 +124,7 @@ export const Slider: React.FC<SliderProps> = (props) => {
           <b>{slides[slideIndex - 1].subtitle}</b>
         </div>
         <div className={s.text}>{slides[slideIndex - 1].text}</div>
+        <div className={s.play}>{triangleMedium()}</div>
       </div>
 
       <BtnSlider moveSlide={nextSlide} direction={"next"} />

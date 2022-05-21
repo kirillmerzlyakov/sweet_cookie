@@ -92,6 +92,21 @@ export const triangleBig = (isWhite?: boolean) => (
   </svg>
 );
 
+export const triangleMedium = () => (
+  <svg
+    width="23"
+    height="26"
+    viewBox="0 0 23 26"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M22.2852 13.2857L0.856583 25.6575L0.856584 0.913921L22.2852 13.2857Z"
+      fill="#1D1D1B"
+    />
+  </svg>
+);
+
 export const voiciaFooter = () => (
   <svg
     width="225"

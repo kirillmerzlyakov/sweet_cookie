@@ -38,6 +38,7 @@
     font-size: 20px;
     line-height: 140%;
     width: 600px;
+    margin-bottom: 20px;
   }
 
   .blueText {
@@ -55,6 +56,25 @@
   }
   .activeAnim {
     opacity: 1;
+  }
+
+  .play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 50px;
+    right: 50px;
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: -1px 0px 0px #000000, 1px 0px 0px #000000, 0px -1px 0px #000000,
+      0px 3px 0px #000000;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .btnSlide {

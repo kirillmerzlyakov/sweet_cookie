@@ -113,7 +113,7 @@ export const SecondBlock: React.FC = () => (
         <div className={s.stepTitle}>
           Внедрение голосового бота для маркетингового агентства Flow Agency
         </div>
-        <div className={s.stepdescription} style={{ width: "400px" }}>
+        <div className={s.stepdescription}>
           Делегирование рутинного процесса обзвона клиентов с менеджеров
           на робота VOICIA
         </div>
