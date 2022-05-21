@@ -42,8 +42,8 @@
   }
 
   .step {
-    width: 400px;
-    // height: 380px;
+    min-width: 400px;
+    width: 30%;
     position: relative;
     box-sizing: border-box;
     border-radius: 50px;
@@ -84,14 +84,35 @@
     height: 187px;
     color: #fff;
     top: -80px;
-    left: 90px;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
     font-size: 170px;
     font-weight: 700;
     line-height: 110%;
+    font-family: Value Sans Pro Bold;
+
     // border: 15px solid #FFFFFF;
     text-shadow: -1px 0px 0px #000000, 1px 0px 0px #000000, 0px -1px 0px #000000,
       0px 3px 0px #000000;
     text-align: center;
-    letter-spacing: 10px;
+    letter-spacing: -1px;
+  }
+
+  @media screen and (max-width: 1400px) {
+    .step {
+      min-width: 400px;
+      width: 80%;
+      margin-bottom: 100px;
+    }
+  }
+
+  @media screen and (max-width: 430px) {
+    .step {
+      min-width: 400px;
+      width: 80%;
+      margin-bottom: 100px;
+    }
   }
 }
