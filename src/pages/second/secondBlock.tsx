@@ -21,13 +21,27 @@ export const SecondBlock: React.FC = () => (
         </div>
         <div className={s.itemsWrapper}>
           <div className={s.row}>
-            {renderSmallItem("600", "звонков/день 3 менеджера")}
-            {renderSmallItem("22%", "процент конверсии")}
+            {renderSmallItem("600", <>звонков/день 3&nbsp;менеджера</>)}
+            {renderSmallItem("22%", <>процент&nbsp;конверсии</>)}
             {renderSmallItem("32₽", "цена одного участника вебинара")}
           </div>
           <div className={s.row}>
-            {renderItem("6000", "звонков за полчаса")}
-            {renderItem("19%", "процент конверсии")}
+            {renderItem(
+              "6000",
+              <>
+                звонков
+                <br />
+                за&nbsp;полчаса
+              </>
+            )}
+            {renderItem(
+              "19%",
+              <>
+                процент
+                <br />
+                конверсии
+              </>
+            )}
             {renderItem("19₽", "цена одного участника вебинара")}
           </div>
         </div>
@@ -48,7 +62,7 @@ export const SecondBlock: React.FC = () => (
 
         <div className={s.itemsWrapper}>
           <div className={s.row}>
-            {renderSmallItem("5000", "звонков/день 25 менеджеров")}
+            {renderSmallItem("5000", <>звонков/день 25&nbsp;менеджеров</>)}
             {renderSmallItem("410₽", "цена заявки")}
           </div>
           <div className={s.row}>
@@ -105,13 +119,34 @@ export const SecondBlock: React.FC = () => (
         </div>
         <div className={s.itemsWrapper}>
           <div className={s.row}>
-            {renderSmallItem("600", "звонков/день 3 менеджера")}
-            {renderSmallItem("22%", "процент конверсии")}
+            {renderSmallItem("600", <>звонков/день 3&nbsp;менеджера</>)}
+            {renderSmallItem(
+              "22%",
+              <>
+                процент
+                <br />
+                конверсии
+              </>
+            )}
             {renderSmallItem("32₽", "цена одного участника вебинара")}
           </div>
           <div className={s.row}>
-            {renderItem("6000", "звонков за полчаса")}
-            {renderItem("19%", "процент конверсии")}
+            {renderItem(
+              "6000",
+              <>
+                звонков
+                <br />
+                за&nbsp;полчаса
+              </>
+            )}
+            {renderItem(
+              "19%",
+              <>
+                процент
+                <br />
+                конверсии
+              </>
+            )}
             {renderItem("19₽", "цена одного участника вебинара")}
           </div>
         </div>
