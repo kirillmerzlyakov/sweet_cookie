@@ -10,10 +10,15 @@ import { StepsBlock } from "./steps/stepsBlock";
 import { SecondBlock } from "./second/secondBlock";
 import { Footer } from "../components/footer/footer";
 import { scrollTo } from "../components/shared";
+import Img from "./../media/2.png";
 
 export const MainPage: React.FC = () => (
   <div className={s.mainPage}>
     <div className={s.firstBlock}>
+      <div className={s.bgCircle} />
+      <div className={s.bgImg}>
+        <img src={Img} alt="" />
+      </div>
       <div className={s.titleWrapper}>
         <div className={s.left}>
           <div className={s.title}>{voiciaTitle()}</div>

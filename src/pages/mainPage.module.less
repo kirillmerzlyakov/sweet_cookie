@@ -11,14 +11,34 @@
     background-repeat: no-repeat;
     background-color: @blue;
     justify-content: center;
-    background-image: url(./../media/2.png);
     background-position: bottom -58px right 0;
+  }
+
+  .bgCircle {
+    position: absolute;
+    border-radius: 50%;
+    top: auto;
+    right: -190px;
+    height: 1000px;
+    width: 1000px;
+    background: rgba(255, 255, 255, 0.2);
+    content: "";
+    z-index: 1;
+  }
+
+  .bgImg {
+    position: absolute;
+    right: 0;
+    bottom: -58px;
+    z-index: 2;
+
   }
 
   
 
   .titleWrapper {
     display: flex;
+    z-index: 10;
   }
 
   .left {
