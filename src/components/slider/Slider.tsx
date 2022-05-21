@@ -3,48 +3,80 @@ import s from "./Slider.module.less";
 import cn from "classnames";
 import leftArrow from "./icons/left.svg";
 import rightArrow from "./icons/right.svg";
-
-import Slide1 from "../../media/slider/1.png";
-import Slide2 from "../../media/slider/2.png";
+import SlideImg from "../../media/slider/3.png";
 
 export const SLIDER_BLOCK_ID = "slider-block-id";
 
 interface Slide {
   img: string;
-  subtitle: string;
-  text: string;
+  subtitle: string | JSX.Element;
+  text: JSX.Element;
 }
 
 const slides: Slide[] = [
   {
-    img: Slide1,
-    subtitle: "Работа с холодными звонками",
-    text: "Прозвонит холодную базу и соберет заявки с качеством, схожим с качеством колл-центра. С любой скоростью и любым объемом.",
+    img: SlideImg,
+    subtitle: "работа с холодными звонками",
+    text: (
+      <>
+        Прозвонит холодную базу и&nbsp;соберет заявки с&nbsp;качеством,
+        схожим&nbsp;с&nbsp;качеством колл-центра. С&nbsp;любой скоростью
+        и&nbsp;любым объемом.
+      </>
+    ),
   },
   {
-    img: Slide2,
-    subtitle: "Работа с входящими заявками и их квалификация.",
-    text: "Робот самостоятельно обработает входящую заявку, квалифицирует лид, договорится о встречезвонке или сам отправит КП. Экономит до 90% времени ваших операторов.",
+    img: SlideImg,
+    subtitle: <>работа с входящими заявками и&nbsp;их&nbsp;квалификация</>,
+    text: (
+      <>
+        Робот самостоятельно обработает входящую заявку, квалифицирует лид,
+        договорится о&nbsp;встречезвонке или сам отправит КП. Экономит
+        до&nbsp;90% времени ваших операторов.
+      </>
+    ),
   },
   {
-    img: Slide1,
-    subtitle: "Автоматизация сервисных звонков",
-    text: "Самостоятельно напомнит о вебинаре, конференции, встрече или предстоящей консультации. Обзвонит не оплативших и отвалившихся клиентов и закроет возражения.",
+    img: SlideImg,
+    subtitle: "автоматизация сервисных звонков",
+    text: (
+      <>
+        Самостоятельно напомнит о&nbsp;вебинаре, конференции, встрече или
+        предстоящей консультации. Обзвонит не&nbsp;оплативших
+        и&nbsp;отвалившихся клиентов и&nbsp;закроет возражения.
+      </>
+    ),
   },
   {
-    img: Slide2,
-    subtitle: "Консультация клиентов",
-    text: "Отвечает на повторяющиеся вопросы клиентов с использованием актуальных данных из ваших CRM или баз данных.",
+    img: SlideImg,
+    subtitle: "консультация клиентов",
+    text: (
+      <>
+        Отвечает на&nbsp;повторяющиеся вопросы клиентов с&nbsp;использованием
+        актуальных данных из&nbsp;ваших CRM или&nbsp;баз&nbsp;данных.
+      </>
+    ),
   },
   {
-    img: Slide1,
-    subtitle: "Опросы и исследования.",
-    text: "Проведет массовое исследование любой сложности в краткие сроки в формате диалога, как “настоящий человек”.",
+    img: SlideImg,
+    subtitle: "опросы и исследования",
+    text: (
+      <>
+        Проведет массовое исследование любой сложности в&nbsp;краткие сроки
+        в&nbsp;формате диалога, как &laquo;настоящий человек&raquo;.
+      </>
+    ),
   },
   {
-    img: Slide1,
-    subtitle: "Массовый подбор персонала.",
-    text: "Проведет скрининг резюме и первичные собеседования. Прозвонит холодную базу соискателей и заинтересует вакансией. Voicia заберет месяцы рутинных работ у вашего hr’а.",
+    img: SlideImg,
+    subtitle: "массовый подбор персонала",
+    text: (
+      <>
+        Проведет скрининг резюме и&nbsp;первичные собеседования. Прозвонит
+        холодную базу соискателей и&nbsp;заинтересует вакансией. Voicia заберет
+        месяцы рутинных работ у&nbsp;вашего hr&rsquo;а.
+      </>
+    ),
   },
 ];
 
@@ -70,7 +102,7 @@ export const Slider: React.FC<SliderProps> = (props) => {
       <div className={s.left}>
         {slides.map((slide, i) => (
           <div
-            key={slide.subtitle}
+            key={slide.subtitle.toString()}
             className={
               slideIndex === i + 1 ? cn(s.slide, s.activeAnim) : s.slide
             }
@@ -99,7 +131,7 @@ export const Slider: React.FC<SliderProps> = (props) => {
       <div className={s.dots}>
         {slides.map((slide, i) => (
           <div
-            key={slide.subtitle}
+            key={slide.subtitle.toString()}
             className={cn(s.dot, i + 1 === slideIndex && s.activeDot)}
             onClick={() => setSlideIndex(i + 1)}
           ></div>

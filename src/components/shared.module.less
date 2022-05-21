@@ -10,10 +10,21 @@
   padding: 0 70px;
 }
 
+.buttonStyle {
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  background-color: @white;
+  box-shadow: -1px 0px 0px #000000, 1px 0px 0px #000000, 0px -1px 0px #000000,
+    0px 3px 0px #000000;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 :export {
   blue: @blue;
   black: @black;
   gray: @gray;
   white: @white;
-
 }

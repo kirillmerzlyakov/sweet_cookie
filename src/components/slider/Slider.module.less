@@ -5,7 +5,7 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    height: 643px;
+    height: 700px;
   }
 
   .left {
@@ -18,13 +18,14 @@
     flex-direction: column;
     width: 50%;
     box-sizing: border-box;
-    padding: 36px;
+    padding: 110px 36px 36px 36px;
   }
 
   .title {
     font-size: 50px;
     line-height: 110%;
     margin-bottom: 40px;
+    font-weight: 700;
   }
 
   .subtitle {
@@ -36,7 +37,7 @@
   .text {
     font-size: 20px;
     line-height: 140%;
-    width: 400px;
+    width: 600px;
   }
 
   .blueText {
@@ -44,13 +45,12 @@
   }
 
   .slide {
-    width: 100%;
+    height: 100%;
     position: absolute;
     opacity: 0;
     transition: opacity ease-in-out 0.2s;
   }
   .slide img {
-    width: 50%;
     object-fit: cover;
   }
   .activeAnim {
@@ -104,13 +104,12 @@
 
     margin-left: auto;
     margin-right: auto;
-    width: 200px;
-    height: 50px;
+    width: 150px;
   }
 
   .dot {
-    width: 12px;
-    height: 12px;
+    width: 6px;
+    height: 6px;
     background-color: rgba(29, 29, 27, 0.5);
     border-radius: 50%;
     content: "";
