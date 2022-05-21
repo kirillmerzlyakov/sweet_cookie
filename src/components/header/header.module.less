@@ -16,6 +16,9 @@
     line-height: 26px;
     z-index: 100;
     transition: all 0.3s ease;
+    .logo {
+      display: none;
+    }
   }
 
   .headerFixed {
@@ -23,16 +26,24 @@
     top: 0;
     left: 0;
     background-color: #fff;
-
+    .logo {
+      display: flex;
+    }
   }
 
   .headerWhite {
     background-color: #fff;
   }
 
-  .left {
+  .nav {
     display: flex;
     padding: 5px 0;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
   }
 
   .hover {
@@ -58,7 +69,9 @@
   }
 
   .tile {
-    height: 28px;
+    display: flex;
+    align-items: center;
+    line-height: 28px;
     margin-right: 40px;
     .hover;
   }

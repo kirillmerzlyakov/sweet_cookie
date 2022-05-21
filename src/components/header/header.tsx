@@ -6,6 +6,7 @@ import { TARIFF_BLOCK_ID } from "../../pages/tariff/tariffBlock";
 import { SLIDER_BLOCK_ID } from "../slider/Slider";
 import { scrollTo } from "../shared";
 import s from "./header.module.less";
+import { voiciaHeader } from "../../media/mediaSVG";
 
 export const Header: React.FC = () => {
   const headerRef = React.useRef<HTMLHeadingElement>(null);
@@ -23,16 +24,15 @@ export const Header: React.FC = () => {
 
   return (
     <div className={s.header} ref={headerRef}>
-      <div className={s.left}>
+      <div className={s.logo}>{voiciaHeader()}</div>
+      <div className={s.nav}>
         {renderTile(<>кейсы</>, SECOND_BLOCK_ID)}
         {renderTile(<>области&nbsp;применения</>, SLIDER_BLOCK_ID)}
         {renderTile(<>с&nbsp;чего&nbsp;начать</>, STEPS_BLOCK_ID)}
         {renderTile(<>тарифы</>, TARIFF_BLOCK_ID)}
         {renderTile(<>заказать&nbsp;разработку</>, FORM_BLOCK_ID)}
       </div>
-      <>
-        <div className={s.signIn}>войти</div>
-      </>
+      <div className={s.signIn}>войти</div>
     </div>
   );
 };

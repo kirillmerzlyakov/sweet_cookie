@@ -4,7 +4,7 @@ import s2 from "../mainPage.module.less";
 import cn from "classnames";
 import Img1 from "../../media/man1.png";
 import Img2 from "../../media/man2.png";
-import { triangleBig } from "../../media/mediaSVG";
+import { arrowDown, triangleBig } from "../../media/mediaSVG";
 import { Slider } from "../../components/slider/Slider";
 
 export const SECOND_BLOCK_ID = "second-block-id";
@@ -91,7 +91,9 @@ export const SecondBlock: React.FC = () => (
         <div className={cn(s.play, s.playWhite)}>{triangleBig(true)}</div>
       </div>
       <div className={s.buttons}>
-        <div className={cn(s2.button, s.button)}>больше кейсов</div>
+        <div className={cn(s.button, s2.button)}>
+          {arrowDown()}&nbsp;больше кейсов
+        </div>
       </div>
     </div>
 
