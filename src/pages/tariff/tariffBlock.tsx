@@ -2,8 +2,10 @@ import React from "react";
 import s from "./tariffBlock.module.less";
 import s1 from "../mainPage.module.less";
 import s2 from "../mainPage.module.less";
+import { scrollTo } from "../../components/shared";
 
 import cn from "classnames";
+import { FORM_BLOCK_ID } from "../form/formBlock";
 
 export const TARIFF_BLOCK_ID = "tariff-block-id";
 
@@ -49,7 +51,9 @@ export const TariffBlock: React.FC = () => (
         <div className={s.price}>35 000 ₽</div>
 
         <div className={s.buttons}>
-          <div className={s2.button}>заказать готовое решение</div>
+          <div className={s2.button} onClick={() => scrollTo(FORM_BLOCK_ID)}>
+            заказать готовое решение
+          </div>
         </div>
       </div>
 
@@ -94,8 +98,13 @@ export const TariffBlock: React.FC = () => (
         <div className={s.price}>от 79 000 ₽</div>
 
         <div className={cn(s.buttons, s.buttons)}>
-          <div className={s2.button}>заказать</div>
-          <div className={cn(s2.button, s1.buttonWhite)}>
+          <div className={s2.button} onClick={() => scrollTo(FORM_BLOCK_ID)}>
+            заказать
+          </div>
+          <div
+            className={cn(s2.button, s1.buttonWhite)}
+            onClick={() => scrollTo(FORM_BLOCK_ID)}
+          >
             мне нужна консультация
           </div>
         </div>

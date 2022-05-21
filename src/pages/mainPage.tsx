@@ -5,10 +5,11 @@ import s from "./mainPage.module.less";
 import cn from "classnames";
 import { TariffBlock } from "./tariff/tariffBlock";
 import { CompaniesBlock } from "./companies/companiesBlock";
-import { FormBlock } from "./form/formBlock";
+import { FormBlock, FORM_BLOCK_ID } from "./form/formBlock";
 import { StepsBlock } from "./steps/stepsBlock";
 import { SecondBlock } from "./second/secondBlock";
 import { Footer } from "../components/footer/footer";
+import { scrollTo } from "../components/shared";
 
 export const MainPage: React.FC = () => (
   <div className={s.mainPage}>
@@ -22,7 +23,9 @@ export const MainPage: React.FC = () => (
             первого звонка до получения денег
           </div>
           <div className={s.buttons}>
-            <div className={s.button}>собрать робота</div>
+            <div className={s.button} onClick={() => scrollTo(FORM_BLOCK_ID)}>
+              собрать робота
+            </div>
             <div className={cn(s.button, s.buttonWhite)}>
               {triangle()}&nbsp; познакомиться с voicia
             </div>
@@ -34,13 +37,13 @@ export const MainPage: React.FC = () => (
         </div>
       </div>
     </div>
-    <SecondBlock/>
+    <SecondBlock />
     {/* <div className={s.thirdBlock}></div> */}
     <BlackBlock />
     <StepsBlock />
     <TariffBlock />
     <CompaniesBlock />
     <FormBlock />
-    <Footer/>
+    <Footer />
   </div>
 );

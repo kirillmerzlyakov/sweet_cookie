@@ -1,6 +1,5 @@
 import React from "react";
 import s from "./secondBlock.module.less";
-import s2 from "../mainPage.module.less";
 import cn from "classnames";
 import Img1 from "../../media/man1.png";
 import Img2 from "../../media/man2.png";
@@ -12,7 +11,7 @@ export const SECOND_BLOCK_ID = "second-block-id";
 export const SecondBlock: React.FC = () => (
   <div className={s.tariffBlock} id={SECOND_BLOCK_ID}>
     <div className={s.wrapperSteps}>
-      <div className={cn(s.step, s.step2)}>
+      <div className={cn(s.step, s.step1)}>
         <div className={s.stepTitle}>
           Внедрение голосового бота для маркетингового агентства Flow Agency
         </div>
@@ -32,7 +31,7 @@ export const SecondBlock: React.FC = () => (
         <div className={s.play}>{triangleBig()}</div>
       </div>
 
-      <div className={cn(s.step)}>
+      <div className={cn(s.step, s.step2)}>
         <div className={s.stepTitle}>
           Лидогенерация холодной базы для Агентства Недвижимости
         </div>
@@ -52,7 +51,7 @@ export const SecondBlock: React.FC = () => (
         <div className={cn(s.play)}>{triangleBig()}</div>
       </div>
 
-      <div className={cn(s.step)}>
+      <div className={cn(s.step, s.step3)}>
         <div className={s.stepTitle}>
           Массовый набор курьеров с кадрового резерва для Самоката
         </div>
@@ -64,15 +63,15 @@ export const SecondBlock: React.FC = () => (
           <img src={Img1} alt="man1"></img>
         </div>
         <div className={s.itemsWrapper} style={{ width: "300px" }}>
-          {renderSmallItem("600", "звонков/день 3 менеджера")}
-          {renderSmallItem("22%", "процент конверсии")}
-          {renderItem("6000", "звонков за полчаса")}
+          {renderSmallItem("8%", "конверсия в соискателя на поиске")}
+          {renderSmallItem("2000", "звонков/день 10 менеджеров")}
+          {renderItem("10%", "конверсия в соискателя на поиске")}
           {renderItem("19%", "процент конверсии")}
         </div>
         <div className={cn(s.play)}>{triangleBig()}</div>
       </div>
 
-      <div className={cn(s.step, s.step3)}>
+      <div className={cn(s.step, s.step4)}>
         <div className={s.stepTitle}>
           Внедрение голосового бота для маркетингового агентства Flow Agency
         </div>
