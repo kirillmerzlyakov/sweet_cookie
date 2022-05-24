@@ -122,4 +122,71 @@
   .boldText {
     .mediumText;
   }
+
+  //планшет
+  @media screen and (max-width: 1024px) {
+    .tariffBlock {
+      min-height: auto;
+      padding: 80px 15px;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .blockWrapper {
+      width: 100%;
+    }
+
+    .title {
+      width: 100%;
+    }
+
+    .input {
+      width: 100%;
+      font-size: 14px;
+      line-height: 140%;
+      height: 40px;
+      border-radius: 12px;
+      padding: 10px 20px;
+    }
+
+    .textarea {
+      height: 110px;
+      border-radius: 12px;
+      padding: 10px 20px;
+    }
+
+    .checkbox {
+      margin-right: 10px;
+      width: 17px;
+      height: 17px;
+    }
+
+    .checkboxRow {
+      font-size: 14px;
+      line-height: 140%;
+    }
+
+    .checkboxWrapper {
+      margin-top: 40px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .button {
+      font-size: 14px;
+      width: 100%;
+      padding: 10px auto;
+    }
+  }
+
+  //мобилка
+  @media screen and (max-width: 428px) {
+    .step {
+    }
+  }
 }

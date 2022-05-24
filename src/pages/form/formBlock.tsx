@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
-import s from "./formBlock.module.less";
 import s1 from "../mainPage.module.less";
+import s from "./formBlock.module.less";
 
 export const FORM_BLOCK_ID = "form-block-id";
 
