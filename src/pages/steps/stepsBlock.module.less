@@ -101,15 +101,37 @@
     letter-spacing: -1px;
   }
 
-  @media screen and (max-width: 1400px) {
+  //планшет
+  @media screen and (max-width: 1024px) {
+    .tariffBlock {
+      padding: 80px 15px 20px 15px;
+    }
+
+    .title {
+      text-align: left;
+    }
+
+    .subtitle {
+      width: 100%;
+      text-align: left;
+    }
+
+    .stepTitleMega {
+      top: -60px;
+      left: 10px;
+      margin-right: 0;
+      margin-left: 0;
+    }
+
     .step {
-      min-width: 400px;
-      width: 80%;
+      width: 100%;
       margin-bottom: 100px;
+      text-align: left;
     }
   }
 
-  @media screen and (max-width: 430px) {
+  //мобилка
+  @media screen and (max-width: 428px) {
     .step {
       min-width: 400px;
       width: 80%;
