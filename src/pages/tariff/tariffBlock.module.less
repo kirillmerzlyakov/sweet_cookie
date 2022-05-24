@@ -41,7 +41,6 @@
     box-shadow: -1px 0px 0px #000000, 1px 0px 0px #000000, 0px -1px 0px #000000,
       0px 3px 0px #000000;
 
-
     &:hover {
       .buttons {
         visibility: visible;
@@ -52,10 +51,10 @@
   .tariffBox1 {
     background-color: @white;
     &:hover {
-    background-color: @blue;
-      ~.tariffBox2 {
+      background-color: @blue;
+      ~ .tariffBox2 {
         background-color: @white;
-  }
+      }
     }
   }
 
@@ -63,13 +62,11 @@
     background-color: @blue;
     &:hover {
       background-color: @blue;
-      ~.tariffBox1 {
+      ~ .tariffBox1 {
         background-color: @white;
       }
     }
   }
-
- 
 
   .title {
     .boldText;
@@ -115,11 +112,48 @@
   }
 
   .buttons {
+    visibility: hidden;
     display: flex;
     flex-direction: row;
     margin-top: 20px;
     div {
       margin-right: 15px;
+    }
+  }
+
+  //планшет
+  @media screen and (max-width: 1024px) {
+    .tariffBlock {
+      padding: 80px 15px 30px 15px;
+    }
+
+    .title {
+      font-size: 30px;
+      line-height: 120%;
+      text-align: left;
+    }
+
+    .subtitle {
+      width: 100%;
+      text-align: left;
+      font-size: 16px;
+    }
+
+    .tariffBox {
+      width: 100%;
+      min-width: 200px;
+      padding: 25px 20px;
+      height: auto;
+    }
+
+    .buttons {
+      font-size: 14px;
+    }
+  }
+
+  //мобилка
+  @media screen and (max-width: 428px) {
+    .step {
     }
   }
 }
