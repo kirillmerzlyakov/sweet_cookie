@@ -11,7 +11,6 @@
     justify-content: center;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    
   }
 
   .wrapperBox {
@@ -41,11 +40,36 @@
     margin-bottom: 50px;
     box-shadow: -1px 0px 0px #000000, 1px 0px 0px #000000, 0px -1px 0px #000000,
       0px 3px 0px #000000;
+
+
+    &:hover {
+      .buttons {
+        visibility: visible;
+      }
+    }
   }
 
-  .tariffBoxBlue {
+  .tariffBox1 {
+    background-color: @white;
+    &:hover {
     background-color: @blue;
+      ~.tariffBox2 {
+        background-color: @white;
   }
+    }
+  }
+
+  .tariffBox2 {
+    background-color: @blue;
+    &:hover {
+      background-color: @blue;
+      ~.tariffBox1 {
+        background-color: @white;
+      }
+    }
+  }
+
+ 
 
   .title {
     .boldText;

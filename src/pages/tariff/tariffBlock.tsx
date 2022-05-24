@@ -17,7 +17,7 @@ export const TariffBlock: React.FC = () => (
       от 3-х рабочих дней, а вам - уделить нам от 3-х часов своего времени
     </div>
     <div className={s.wrapperBox}>
-      <div className={s.tariffBox}>
+      <div className={cn(s.tariffBox, s.tariffBox1)}>
         <div>
           <div className={s.title1}>готовое решение</div>
 
@@ -64,7 +64,7 @@ export const TariffBlock: React.FC = () => (
         </div>
       </div>
 
-      <div className={cn(s.tariffBox, s.tariffBoxBlue)}>
+      <div className={cn(s.tariffBox, s.tariffBox2)}>
         <div>
           <div className={s.title1}>кастомная разработка</div>
           <div className={s.wrapperText}>
