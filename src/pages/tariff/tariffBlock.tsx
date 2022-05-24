@@ -1,6 +1,5 @@
 import React from "react";
 import s from "./tariffBlock.module.less";
-import s1 from "../mainPage.module.less";
 import s2 from "../mainPage.module.less";
 import { scrollTo } from "../../components/shared";
 
@@ -57,7 +56,7 @@ export const TariffBlock: React.FC = () => (
           <div className={s.price}>35 000 ₽</div>
 
           <div className={s.buttons}>
-            <div className={s2.button} onClick={() => scrollTo(FORM_BLOCK_ID)}>
+            <div className={cn(s2.button, s.button)} onClick={() => scrollTo(FORM_BLOCK_ID)}>
               заказать готовое решение
             </div>
           </div>
@@ -107,11 +106,11 @@ export const TariffBlock: React.FC = () => (
           <div className={s.price}>от 79 000 ₽</div>
 
           <div className={cn(s.buttons, s.buttons)}>
-            <div className={s2.button} onClick={() => scrollTo(FORM_BLOCK_ID)}>
+            <div className={cn(s2.button, s.button)} onClick={() => scrollTo(FORM_BLOCK_ID)}>
               заказать
             </div>
             <div
-              className={cn(s2.button, s1.buttonWhite)}
+              className={cn(s2.button, s.button, s.buttonWhite)}
               onClick={() => scrollTo(FORM_BLOCK_ID)}
             >
               мне нужна консультация

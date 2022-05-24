@@ -118,6 +118,17 @@
     margin-top: 20px;
     div {
       margin-right: 15px;
+      text-align: center;
+    }
+
+    .button {
+      display: block;
+      text-align: center;
+    }
+
+    .buttonWhite {
+      background-color: #fff;
+      color: @black;
     }
   }
 
@@ -143,11 +154,44 @@
       width: 100%;
       min-width: 200px;
       padding: 25px 20px;
+      border-radius: 20px;
+
       height: auto;
     }
 
-    .buttons {
+    .title1 {
+      font-size: 24px;
+      line-height: 120%;
+    }
+
+    .featureTitle {
+      font-size: 16px;
+      line-height: 120%;
+    }
+
+    .featuredescription {
       font-size: 14px;
+      line-height: 140%;
+    }
+
+    .price {
+      font-size: 25px;
+      line-height: 120%;
+    }
+
+    .buttons {
+      visibility: visible;
+      display: flex;
+      flex-direction: column;
+      div {
+        margin: 0 0 15px 0;
+      }
+
+      .button {
+        font-size: 14px;
+        line-height: 140%;
+        padding: 10px 50px;
+      }
     }
   }
 
