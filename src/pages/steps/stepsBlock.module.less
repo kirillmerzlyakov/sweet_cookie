@@ -50,7 +50,7 @@
     border-radius: 50px;
     border: @black 1px solid;
     text-align: center;
-
+    background-color: @white;
     padding: 125px 30px 40px 30px;
     box-shadow: -1px 0px 0px #000000, 1px 0px 0px #000000, 0px -1px 0px #000000,
       0px 3px 0px #000000;
@@ -108,12 +108,15 @@
     }
 
     .title {
+      font-size: 30px;
+      line-height: 120%;
       text-align: left;
     }
 
     .subtitle {
       width: 100%;
       text-align: left;
+      font-size: 16px;
     }
 
     .stepTitleMega {
@@ -125,17 +128,16 @@
 
     .step {
       width: 100%;
+      min-width: 100px;
       margin-bottom: 100px;
       text-align: left;
+      border-radius: 20px;
     }
   }
 
   //мобилка
   @media screen and (max-width: 428px) {
     .step {
-      min-width: 400px;
-      width: 80%;
-      margin-bottom: 100px;
     }
   }
 }
