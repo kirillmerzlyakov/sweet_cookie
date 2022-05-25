@@ -7,7 +7,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    min-width: 1080px;
     padding-bottom: 110px;
     box-sizing: border-box;
     overflow: hidden;
@@ -49,5 +48,30 @@
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  //планшет
+  @media screen and (max-width: 1024px) {
+    .blackBlock {
+      padding: 0 15px 40px 15px;
+      background-position: 80% 0%;
+      background-size: auto 75%;
+    }
+
+    .text {
+      width: 345px;
+      font-size: 25px;
+    }
+
+    .bgCircle {
+      display: none;
+    }
+  }
+
+  //мобилка
+  @media screen and (max-width: 428px) {
+    .nav {
+      display: none;
+    }
   }
 }

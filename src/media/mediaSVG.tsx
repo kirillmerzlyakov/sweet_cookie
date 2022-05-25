@@ -107,11 +107,9 @@ export const triangleMedium = () => (
   </svg>
 );
 
-export const voiciaFooter = () => (
+export const voiciaFooterLogo = () => (
   <svg
-    width="225"
-    height="50"
-    viewBox="0 0 225 50"
+    viewBox="0 0 250 50"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
