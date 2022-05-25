@@ -11,158 +11,168 @@ export const SECOND_BLOCK_ID = "second-block-id";
 export const SecondBlock: React.FC = () => (
   <div className={s.tariffBlock} id={SECOND_BLOCK_ID}>
     <div className={s.wrapperSteps}>
-      <div className={cn(s.step, s.step1)}>
-        <div className={s.stepTitle}>
-          Внедрение голосового бота для маркетингового агентства Flow Agency
-        </div>
-        <div className={s.stepdescription}>
-          Делегирование рутинного процесса обзвона клиентов с менеджеров
-          на робота VOICIA
-        </div>
-        <div className={s.itemsWrapper}>
-          <div className={s.row}>
-            {renderSmallItem("600", <>звонков/день 3&nbsp;менеджера</>)}
-            {renderSmallItem(
-              "22%",
-              <>
-                процент
-                <br />
-                конверсии
-              </>
-            )}
-            {renderSmallItem("32₽", "цена участника вебинара")}
+      <div className={s.stepsRow}>
+        <div className={cn(s.step, s.step1)}>
+          <div className={s.stepTitle}>
+            Внедрение голосового бота для маркетингового агентства Flow Agency
           </div>
-          <div className={s.row}>
-            {renderItem(
-              "6000",
-              <>
-                звонков
-                <br />
-                за&nbsp;полчаса
-              </>
-            )}
-            {renderItem(
-              "19%",
-              <>
-                процент
-                <br />
-                конверсии
-              </>
-            )}
-            {renderItem("19₽", "цена участника вебинара")}
+          <div className={s.stepdescription}>
+            Делегирование рутинного процесса обзвона клиентов с менеджеров
+            на робота VOICIA
           </div>
-        </div>
-
-        <div className={s.play}>{triangleBig()}</div>
-      </div>
-
-      <div className={cn(s.step, s.step2)}>
-        <div className={s.stepTitle}>
-          Лидогенерация холодной базы для Агентства Недвижимости
-        </div>
-        <div className={s.stepdescription}>
-          Заменили первую линию колл-центра и снизили стоимость заявки на 33%
-        </div>
-        <div className={s.img1}>
-          <img src={Img2} alt="man1"></img>
-        </div>
-
-        <div className={s.itemsWrapper}>
-          <div className={s.row}>
-            {renderSmallItem("5000", <>звонков/день 25&nbsp;менеджеров</>)}
-            {renderSmallItem("410₽", "цена заявки")}
-          </div>
-          <div className={s.row}>
-            {renderItem(
-              "30000",
-              <>
-                звонков/день
-                <br />1 робот
-              </>
-            )}
-            {renderItem("180₽", "цена заявки")}
-          </div>
-        </div>
-        <div className={cn(s.play)}>{triangleBig()}</div>
-      </div>
-
-      <div className={cn(s.step, s.step3)}>
-        <div className={s.stepTitle}>
-          Массовый набор курьеров с кадрового резерва для Самоката
-        </div>
-        <div className={s.stepdescription} style={{ width: "285px" }}>
-          Доверили рутинный процесс HR роботу и получили 10% конверсии
-          в соискателя
-        </div>
-        <div className={s.img2}>
-          <img src={Img1} alt="man1"></img>
-        </div>
-        <div className={s.itemsWrapper}>
-          <div className={s.row}>
-            {renderSmallItem("8%", <>конверсия в соискателя на&nbsp;поиске</>)}
-            {renderSmallItem("2000", "звонков/день 10 менеджеров")}
-          </div>
-          <div className={s.row}>
-            {renderItem("10%", <>конверсия в соискателя на&nbsp;поиске</>)}
-            <div className={s.checkTextWrapper}>
-              <div className={s.checkItem}>
-                <div>
+          <div className={s.itemsWrapper}>
+            <div className={s.row}>
+              {renderSmallItem("600", <>звонков/день 3&nbsp;менеджера</>)}
+              {renderSmallItem(
+                "22%",
+                <>
+                  процент
                   <br />
-                  автоматическая квалификация соискателя по&nbsp;типу курьер на
-                  велосипеде или курьер на авто
+                  конверсии
+                </>
+              )}
+              {renderSmallItem("32₽", "цена участника вебинара")}
+            </div>
+            <div className={s.row}>
+              {renderItem(
+                "6000",
+                <>
+                  звонков
+                  <br />
+                  за&nbsp;полчаса
+                </>
+              )}
+              {renderItem(
+                "19%",
+                <>
+                  процент
+                  <br />
+                  конверсии
+                </>
+              )}
+              {renderItem("19₽", "цена участника вебинара")}
+            </div>
+          </div>
+
+          <div className={s.play}>{triangleBig()}</div>
+        </div>
+
+        <div className={cn(s.step, s.step2)}>
+          <div className={s.stepTitle}>
+            Лидогенерация холодной базы для Агентства Недвижимости
+          </div>
+          <div className={s.stepdescription}>
+            Заменили первую линию колл-центра и снизили стоимость заявки на 33%
+          </div>
+          <div className={s.img1}>
+            <img src={Img2} alt="man1"></img>
+          </div>
+
+          <div className={s.itemsWrapper}>
+            <div className={s.row}>
+              {renderSmallItem("5000", <>звонков/день 25&nbsp;менеджеров</>)}
+              {renderSmallItem("410₽", "цена заявки")}
+            </div>
+            <div className={s.row}>
+              {renderItem(
+                "30000",
+                <>
+                  звонков/день
+                  <br />1 робот
+                </>
+              )}
+              {renderItem("180₽", "цена заявки")}
+            </div>
+          </div>
+          <div className={cn(s.play)}>{triangleBig()}</div>
+        </div>
+      </div>
+
+      <div className={s.stepsRow}>
+        <div className={cn(s.step, s.step3)}>
+          <div className={s.stepTitle}>
+            Массовый набор курьеров с кадрового резерва для Самоката
+          </div>
+          <div className={s.stepdescription} style={{ width: "285px" }}>
+            Доверили рутинный процесс HR роботу и получили 10% конверсии
+            в соискателя
+          </div>
+          <div className={s.img2}>
+            <img src={Img1} alt="man1"></img>
+          </div>
+          <div className={s.itemsWrapper}>
+            <div className={s.row}>
+              {renderSmallItem(
+                "8%",
+                <>конверсия в соискателя на&nbsp;поиске</>
+              )}
+              {renderSmallItem("2000", "звонков/день 10 менеджеров")}
+            </div>
+            <div className={s.row}>
+              {renderItem("10%", <>конверсия в соискателя на&nbsp;поиске</>)}
+              <div className={s.checkTextWrapper}>
+                <div className={s.checkItem}>
+                  <div>
+                    <br />
+                    автоматическая квалификация соискателя по&nbsp;типу курьер
+                    на велосипеде или курьер на авто
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div className={cn(s.play)}>{triangleBig()}</div>
         </div>
-        <div className={cn(s.play)}>{triangleBig()}</div>
-      </div>
 
-      <div className={cn(s.step, s.step4)}>
-        <div className={s.stepTitle}>
-          Внедрение голосового бота для маркетингового агентства Flow Agency
-        </div>
-        <div className={s.stepdescription}>
-          Делегирование рутинного процесса обзвона клиентов с менеджеров
-          на робота VOICIA
-        </div>
-        <div className={s.itemsWrapper}>
-          <div className={s.row}>
-            {renderSmallItem("600", <>звонков/день 3&nbsp;менеджера</>)}
-            {renderSmallItem(
-              "22%",
-              <>
-                процент
-                <br />
-                конверсии
-              </>
-            )}
-            {renderSmallItem("32₽", "цена участника вебинара")}
+        <div className={cn(s.step, s.step4)}>
+          <div className={s.stepTitle}>
+            Внедрение голосового бота для маркетингового агентства Flow Agency
           </div>
-          <div className={s.row}>
-            {renderItem(
-              "6000",
-              <>
-                звонков
-                <br />
-                за&nbsp;полчаса
-              </>
-            )}
-            {renderItem(
-              "19%",
-              <>
-                процент
-                <br />
-                конверсии
-              </>
-            )}
-            {renderItem("19₽", "цена участника вебинара")}
+          <div className={s.stepdescription}>
+            Делегирование рутинного процесса обзвона клиентов с менеджеров
+            на робота VOICIA
           </div>
+          <div className={s.itemsWrapper}>
+            <div className={s.row}>
+              {renderSmallItem("600", <>звонков/день 3&nbsp;менеджера</>)}
+              {renderSmallItem(
+                "22%",
+                <>
+                  процент
+                  <br />
+                  конверсии
+                </>
+              )}
+              {renderSmallItem("32₽", "цена участника вебинара")}
+            </div>
+            <div className={s.row}>
+              {renderItem(
+                "6000",
+                <>
+                  звонков
+                  <br />
+                  за&nbsp;полчаса
+                </>
+              )}
+              {renderItem(
+                "19%",
+                <>
+                  процент
+                  <br />
+                  конверсии
+                </>
+              )}
+              {renderItem("19₽", "цена участника вебинара")}
+            </div>
+          </div>
+          <div className={cn(s.play, s.playWhite)}>{triangleBig(true)}</div>
         </div>
-        <div className={cn(s.play, s.playWhite)}>{triangleBig(true)}</div>
       </div>
       <div className={s.buttons}>
-        <div className={s.button}>{arrowDown()}&nbsp;&nbsp;больше кейсов</div>
+        <div className={s.button}>
+          <div className={s.arrowBox}>{arrowDown()}</div>
+          &nbsp;&nbsp;больше кейсов
+        </div>
       </div>
     </div>
 
