@@ -1,4 +1,4 @@
-import { voiciaFooter } from "../../media/mediaSVG";
+import { voiciaFooterLogo } from "../../media/mediaSVG";
 import { scrollTo } from "../shared";
 
 import s from "./footer.module.less";
@@ -13,7 +13,7 @@ import { FORM_BLOCK_ID } from "../../pages/form/formBlock";
 export const Footer = () => (
   <div className={s.footer}>
     <div className={s.textBlock}>
-      <div className={s.text1}>{voiciaFooter()}</div>
+      <div className={s.text1}>{voiciaFooterLogo()}</div>
       <div className={s.text2}>
         <b>
           <span className={s.textBlue}>снизьте издержки</span> на поддержку
@@ -36,7 +36,6 @@ export const Footer = () => (
           <br />
           ©voicia, 2022
         </div>
-        <div></div>
       </div>
     </div>
     <div className={s.img}>

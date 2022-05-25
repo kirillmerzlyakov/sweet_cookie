@@ -9,7 +9,6 @@
     justify-content: space-between;
     min-height: 260px;
     width: 100%;
-    min-width: 1080px;
     box-sizing: border-box;
     color: @white;
     padding: 60px 60px 20px 70px;
@@ -80,9 +79,55 @@
     right: 350px;
   }
 
-  @media screen and (max-width: 430px) {
+  //планшет
+  @media screen and (max-width: 1024px) {
     .footer {
-      height: 50px;
+      padding: 30px 15px 20px 15px;
+      background-image: none;
+    }
+
+    .textBlock {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .text1 {
+      margin-bottom: 15px;
+      width: 135px;
+      height: 30px;
+    }
+
+    .text2 {
+      font-size: 18px;
+      line-height: 120%;
+    }
+
+    .nav {
+      display: none;
+    }
+
+    .img {
+      bottom: 0;
+      right: 0;
+    }
+
+    .logo {
+      position: absolute;
+      left: 15px;
+      bottom: 20px;
+      font-size: 14px;
+      line-height: 140%;
+    }
+
+    .logoText {
+      text-align: left;
+    }
+  }
+
+  //мобилка
+  @media screen and (max-width: 428px) {
+    .nav {
+      display: none;
     }
   }
 }
