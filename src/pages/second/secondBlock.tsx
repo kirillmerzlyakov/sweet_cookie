@@ -4,7 +4,6 @@ import cn from "classnames";
 import Img1 from "../../media/man1.png";
 import Img2 from "../../media/man2.png";
 import { arrowDown, triangleBig } from "../../media/mediaSVG";
-import { Slider } from "../../components/slider/Slider";
 
 export const SECOND_BLOCK_ID = "second-block-id";
 
@@ -13,49 +12,49 @@ export const SecondBlock: React.FC = () => (
     <div className={s.wrapperSteps}>
       <div className={s.stepsRow}>
         <div className={cn(s.step, s.step1)}>
-          <div className={s.stepTitle}>
-            Внедрение голосового бота для маркетингового агентства Flow Agency
-          </div>
-          <div className={s.stepdescription}>
-            Делегирование рутинного процесса обзвона клиентов с менеджеров
-            на робота VOICIA
-          </div>
-          <div className={s.itemsWrapper}>
-            <div className={s.row}>
-              {renderSmallItem("600", <>звонков/день 3&nbsp;менеджера</>)}
-              {renderSmallItem(
-                "22%",
-                <>
-                  процент
-                  <br />
-                  конверсии
-                </>
-              )}
-              {renderSmallItem("32₽", "цена участника вебинара")}
+            <div className={s.stepTitle}>
+              Внедрение голосового бота для маркетингового агентства Flow Agency
             </div>
-            <div className={s.row}>
-              {renderItem(
-                "6000",
-                <>
-                  звонков
-                  <br />
-                  за&nbsp;полчаса
-                </>
-              )}
-              {renderItem(
-                "19%",
-                <>
-                  процент
-                  <br />
-                  конверсии
-                </>
-              )}
-              {renderItem("19₽", "цена участника вебинара")}
+            <div className={s.stepdescription}>
+              Делегирование рутинного процесса обзвона клиентов с менеджеров
+              на робота VOICIA
             </div>
-          </div>
+            <div className={s.itemsWrapper}>
+              <div className={s.row}>
+                {renderSmallItem("600", <>звонков/день 3&nbsp;менеджера</>)}
+                {renderSmallItem(
+                  "22%",
+                  <>
+                    процент
+                    <br />
+                    конверсии
+                  </>
+                )}
+                {renderSmallItem("32₽", "цена участника вебинара")}
+              </div>
+              <div className={s.row}>
+                {renderItem(
+                  "6000",
+                  <>
+                    звонков
+                    <br />
+                    за&nbsp;полчаса
+                  </>
+                )}
+                {renderItem(
+                  "19%",
+                  <>
+                    процент
+                    <br />
+                    конверсии
+                  </>
+                )}
+                {renderItem("19₽", "цена участника вебинара")}
+              </div>
+            </div>
 
-          <div className={s.play}>{triangleBig()}</div>
-        </div>
+            <div className={s.play}>{triangleBig()}</div>
+          </div>
 
         <div className={cn(s.step, s.step2)}>
           <div className={s.stepTitle}>
