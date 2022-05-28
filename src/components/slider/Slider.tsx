@@ -126,10 +126,11 @@ export const Slider: React.FC<SliderProps> = (props) => {
               <div className={s.titleDesk}>{renderTitle()}</div>
               <div className={s.textWrapper}>
                 <div className={s.subtitle}>
+                  <div className={s.playMobile}>{renderPlay()}</div>
                   <b>{slides[i].subtitle}</b>
                 </div>
                 <div className={s.text}>{slides[i].text}</div>
-                {renderPlay()}
+                <div className={s.playDesk}>{renderPlay()}</div>
               </div>
             </div>
           </div>

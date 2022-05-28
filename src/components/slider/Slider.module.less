@@ -113,11 +113,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    bottom: 50px;
-    right: 50px;
     width: 57px;
     height: 57px;
-    padding-left: 5px;
+    padding: 14px 14px 14px 19px;
     box-sizing: border-box;
     border-radius: 50%;
     background: rgba(255, 255, 255, 1);
@@ -129,6 +127,10 @@
       cursor: pointer;
       transform: rotateY(-2px);
     }
+  }
+
+  .playMobile {
+    display: none;
   }
 
   .dots {
@@ -214,6 +216,8 @@
     }
 
     .subtitle {
+      display: flex;
+      gap: 10px;
       font-size: 20px;
       line-height: 120%;
     }
@@ -228,6 +232,21 @@
 
     img {
       height: 295px;
+    }
+
+    .playDesk {
+      display: none;
+    }
+
+    .playMobile {
+      display: flex;
+      padding-top: 5px;
+    }
+
+    .play {
+      width: 30px;
+      height: 30px;
+      padding: 8px 8px 8px 10px;
     }
 
     .text {
