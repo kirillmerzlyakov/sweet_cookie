@@ -79,7 +79,32 @@
     display: flex;
     align-items: center;
     line-height: 28px;
-    margin-right: 40px;
+    margin-right: 10px;
     .hover;
+  }
+
+  //планшет
+  @media screen and (max-width: 1024px) {
+    .header {
+      width: 100%;
+      padding: 15px 15px;
+      justify-content: right;
+    }
+
+    .headerFixed {
+      justify-content: space-between;
+
+    }
+
+    .nav {
+      display: none;
+    }
+  }
+
+  //мобилка
+  @media screen and (max-width: 428px) {
+    .nav {
+      display: none;
+    }
   }
 }
