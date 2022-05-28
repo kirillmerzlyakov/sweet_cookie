@@ -102,6 +102,9 @@
 
   .textWrapper {
     &:hover {
+      > .play {
+        transform: translateY(-2px);
+      }
       cursor: pointer;
     }
   }
@@ -127,7 +130,6 @@
       transform: rotateY(-2px);
     }
   }
-
 
   .dots {
     display: flex;
@@ -180,6 +182,7 @@
       flex-direction: row;
       gap: 40px;
       padding-left: 15px;
+      padding-right: 90px;
     }
     .slidesWrapper::-webkit-scrollbar {
       display: none;
@@ -234,9 +237,10 @@
       margin-bottom: 20px;
     }
 
-    .btnSlide {
-      display: none;
+    .dots {
+      bottom: 30px;
     }
+
   }
 
   //мобилка
