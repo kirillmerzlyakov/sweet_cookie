@@ -5,6 +5,7 @@ import leftArrow from "./icons/left.svg";
 import rightArrow from "./icons/right.svg";
 import SlideImg from "../../media/slider/3.png";
 import { triangleMedium } from "../../media/mediaSVG";
+import { scrollTo } from "../shared";
 
 export const SLIDER_BLOCK_ID = "slider-block-id";
 
@@ -93,28 +94,35 @@ export const Slider: React.FC<SliderProps> = () => {
         {slides.map((slide, i) => (
           <div
             className={slideIndex === i ? cn(s.slide, s.slideActive) : s.slide}
+            id={`slide-${i}`}
           >
-            <div className={s.left}>
+            <div
+              className={s.left}
+              onClick={() =>
+                setSlideIndex(
+                  slideIndex === 0 ? slides.length - 1 : slideIndex - 1
+                )
+              }
+            >
               <div key={slide.subtitle.toString()} className={s.slideImg}>
                 <img src={slide.img} alt="картинка" />
               </div>
             </div>
-            <div className={s.right}>
+            <div
+              className={s.right}
+              onClick={() => {
+                setSlideIndex((slideIndex + 1) % slides.length);
+              }}
+            >
               <div className={s.titleDesk}>{renderTitle()}</div>
-              <div className={s.subtitle}>
-                <b>{slides[i].subtitle}</b>
+              <div className={s.textWrapper}>
+                <div className={s.subtitle}>
+                  <b>{slides[i].subtitle}</b>
+                </div>
+                <div className={s.text}>{slides[i].text}</div>
+                {renderPlay()}
               </div>
-              <div className={s.text}>{slides[i].text}</div>
-              {renderPlay()}
             </div>
-            <BtnSlider
-              moveSlide={() => setSlideIndex((i + 1) % slides.length)}
-              direction={"next"}
-            />
-            <BtnSlider
-              moveSlide={() => setSlideIndex((i - 1) % slides.length)}
-              direction={"prev"}
-            />
           </div>
         ))}
       </div>
@@ -124,27 +132,14 @@ export const Slider: React.FC<SliderProps> = () => {
           <div
             key={slide.subtitle.toString()}
             className={cn(s.dot, i === slideIndex && s.activeDot)}
-            onClick={() => setSlideIndex(i)}
+            onClick={() => {
+              setSlideIndex(i);
+              scrollTo(`slide-${i}`);
+            }}
           ></div>
         ))}
       </div>
     </div>
-  );
-};
-
-interface Props {
-  direction: string;
-  moveSlide: () => void;
-}
-
-const BtnSlider: React.FC<Props> = ({ direction, moveSlide }) => {
-  return (
-    <button
-      onClick={moveSlide}
-      className={cn(s.btnSlide, direction === "next" ? s.next : s.prev)}
-    >
-      <img src={direction === "next" ? rightArrow : leftArrow} alt="картинка" />
-    </button>
   );
 };
 
