@@ -15,16 +15,33 @@
     overflow: hidden;
   }
 
-  .bgCircle {
+  .circle {
     position: absolute;
-    border-radius: 50%;
-    top: auto;
-    right: -190px;
-    height: 1000px;
+    top: 10%;
+    right: -10%;
     width: 1000px;
+    height: 900px;
     background: rgba(255, 255, 255, 0.2);
-    content: "";
-    z-index: 1;
+    animation: waves 5s infinite linear;
+    border-radius: 46%;
+    transform-origin: 50% 48%;
+  }
+
+  .circle:nth-child(2) {
+    animation-duration: 7s;
+  }
+
+  .circle:nth-child(3) {
+    margin-top: 30px;
+    animation-duration: 9s;
+  }
+  @keyframes waves {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
   }
 
   .bgImg {
@@ -32,10 +49,7 @@
     right: 0;
     bottom: -58px;
     z-index: 2;
-
   }
-
-  
 
   .titleWrapper {
     display: flex;
@@ -76,7 +90,6 @@
     margin-top: 15px;
     width: 428px;
     line-height: 140%;
-    
   }
 
   .buttons {
