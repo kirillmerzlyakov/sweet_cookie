@@ -95,9 +95,9 @@ export const Slider: React.FC<SliderProps> = (props) => {
         onScroll={(e) => {
           const elem = e.currentTarget;
           const scrollWidth = elem.scrollWidth - elem.clientWidth + 90;
-          const widthItem = scrollWidth / (slides.length);
+          const widthItem = scrollWidth / slides.length;
           const curElem = Math.floor(elem.scrollLeft / widthItem);
-          setSlideIndex(curElem);
+          if (curElem !== slideIndex) setSlideIndex(curElem);
         }}
       >
         {slides.map((slide, i) => (
