@@ -84,13 +84,22 @@ const slides: Slide[] = [
 
 interface SliderProps {}
 
-export const Slider: React.FC<SliderProps> = () => {
+export const Slider: React.FC<SliderProps> = (props) => {
   const [slideIndex, setSlideIndex] = useState(0);
 
   return (
     <div className={s.containerSlider} id={SLIDER_BLOCK_ID}>
       <div className={s.titleMobile}>{renderTitle()}</div>
-      <div className={s.slidesWrapper}>
+      <div
+        className={s.slidesWrapper}
+        onScroll={(e) => {
+          const elem = e.currentTarget;
+          const scrollWidth = elem.scrollWidth - elem.clientWidth + 90;
+          const widthItem = scrollWidth / (slides.length);
+          const curElem = Math.floor(elem.scrollLeft / widthItem);
+          setSlideIndex(curElem);
+        }}
+      >
         {slides.map((slide, i) => (
           <div
             className={slideIndex === i ? cn(s.slide, s.slideActive) : s.slide}
