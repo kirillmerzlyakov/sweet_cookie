@@ -10,7 +10,7 @@ import { StepsBlock } from "./steps/stepsBlock";
 import { SecondBlock } from "./second/secondBlock";
 import { Footer } from "../components/footer/footer";
 import { scrollTo } from "../components/shared";
-import Img from "./../media/2.png";
+import Img from "./../media/bg_main.png";
 import { Slider } from "../components/slider/Slider";
 
 export const MainPage: React.FC = () => (
