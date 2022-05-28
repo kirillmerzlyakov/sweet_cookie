@@ -176,7 +176,6 @@ export const SecondBlock: React.FC = () => (
       </div>
     </div>
 
-    <Slider />
   </div>
 );
 

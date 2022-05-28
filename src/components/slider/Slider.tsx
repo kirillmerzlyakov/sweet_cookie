@@ -83,59 +83,48 @@ const slides: Slide[] = [
 
 interface SliderProps {}
 
-export const Slider: React.FC<SliderProps> = (props) => {
-  const [slideIndex, setSlideIndex] = useState(1);
-
-  const nextSlide = () => {
-    slideIndex === slides.length
-      ? setSlideIndex(1)
-      : setSlideIndex(slideIndex + 1);
-  };
-
-  const prevSlide = () => {
-    slideIndex === 1
-      ? setSlideIndex(slides.length)
-      : setSlideIndex(slideIndex - 1);
-  };
+export const Slider: React.FC<SliderProps> = () => {
+  const [slideIndex, setSlideIndex] = useState(0);
 
   return (
     <div className={s.containerSlider} id={SLIDER_BLOCK_ID}>
-      <div className={s.left}>
+      <div className={s.titleMobile}>{renderTitle()}</div>
+      <div className={s.slidesWrapper}>
         {slides.map((slide, i) => (
           <div
-            key={slide.subtitle.toString()}
-            className={
-              slideIndex === i + 1 ? cn(s.slide, s.activeAnim) : s.slide
-            }
+            className={slideIndex === i ? cn(s.slide, s.slideActive) : s.slide}
           >
-            <img src={slide.img} alt="картинка" />
+            <div className={s.left}>
+              <div key={slide.subtitle.toString()} className={s.slideImg}>
+                <img src={slide.img} alt="картинка" />
+              </div>
+            </div>
+            <div className={s.right}>
+              <div className={s.titleDesk}>{renderTitle()}</div>
+              <div className={s.subtitle}>
+                <b>{slides[i].subtitle}</b>
+              </div>
+              <div className={s.text}>{slides[i].text}</div>
+              {renderPlay()}
+            </div>
+            <BtnSlider
+              moveSlide={() => setSlideIndex((i + 1) % slides.length)}
+              direction={"next"}
+            />
+            <BtnSlider
+              moveSlide={() => setSlideIndex((i - 1) % slides.length)}
+              direction={"prev"}
+            />
           </div>
         ))}
       </div>
-      <div className={s.right}>
-        <div className={s.title}>
-          <b>
-            <span className={s.blueText}>знакомьтесь: voicia – </span>
-            интеллектуальный <br />
-            голосовой робот
-          </b>
-        </div>
-        <div className={s.subtitle}>
-          <b>{slides[slideIndex - 1].subtitle}</b>
-        </div>
-        <div className={s.text}>{slides[slideIndex - 1].text}</div>
-        <div className={s.play}>{triangleMedium()}</div>
-      </div>
-
-      <BtnSlider moveSlide={nextSlide} direction={"next"} />
-      <BtnSlider moveSlide={prevSlide} direction={"prev"} />
 
       <div className={s.dots}>
         {slides.map((slide, i) => (
           <div
             key={slide.subtitle.toString()}
-            className={cn(s.dot, i + 1 === slideIndex && s.activeDot)}
-            onClick={() => setSlideIndex(i + 1)}
+            className={cn(s.dot, i === slideIndex && s.activeDot)}
+            onClick={() => setSlideIndex(i)}
           ></div>
         ))}
       </div>
@@ -158,3 +147,15 @@ const BtnSlider: React.FC<Props> = ({ direction, moveSlide }) => {
     </button>
   );
 };
+
+const renderTitle = () => (
+  <div className={s.title}>
+    <b>
+      <span className={s.blueText}>знакомьтесь: voicia – </span>
+      интеллектуальный <br />
+      голосовой робот
+    </b>
+  </div>
+);
+
+const renderPlay = () => <div className={s.play}>{triangleMedium()}</div>;
