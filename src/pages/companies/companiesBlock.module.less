@@ -31,11 +31,11 @@
   .marquee {
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: 100%;
-  }
-
-  .marquee > div {
-    margin-right: 50px;
+    div {
+      margin-right: 50px;
+    }
   }
 
   //планшет
@@ -51,10 +51,18 @@
       box-sizing: border-box;
       font-size: 25px;
     }
+
+    .marquee {
+      div {
+        margin-right: 30px;
+        img {
+          height: 30px;
+        }
+      }
+    }
   }
 
   //мобилка
   @media screen and (max-width: 428px) {
-    
   }
 }
