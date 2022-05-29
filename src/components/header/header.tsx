@@ -6,10 +6,12 @@ import { TARIFF_BLOCK_ID } from "../../pages/tariff/tariffBlock";
 import { SLIDER_BLOCK_ID } from "../slider/Slider";
 import { scrollTo } from "../shared";
 import s from "./header.module.less";
+import cn from "classnames";
 import { voiciaHeader } from "../../media/mediaSVG";
 
 export const Header: React.FC = () => {
   const headerRef = React.useRef<HTMLHeadingElement>(null);
+  const [kebabActive, setKebabActive] = React.useState(false);
   React.useEffect(() => {
     var scrollPrev = 0;
     const onScroll = function () {
@@ -33,6 +35,71 @@ export const Header: React.FC = () => {
         {renderTile(<>заказать&nbsp;разработку</>, FORM_BLOCK_ID)}
       </div>
       <div className={s.signIn}>войти</div>
+      <div
+        className={cn(s.kebabIcon, kebabActive && s.kebabIconActive)}
+        onClick={() => setKebabActive(!kebabActive)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      {kebabActive && (
+        <div className={s.kebabMenu}>
+          <div
+            className={s.kebabMenuItem}
+            onClick={() => {
+              scrollTo(SECOND_BLOCK_ID);
+              setKebabActive(false);
+            }}
+          >
+            кейсы
+          </div>
+          <div
+            className={s.kebabMenuItem}
+            onClick={() => {
+              scrollTo(SLIDER_BLOCK_ID);
+              setKebabActive(false);
+            }}
+          >
+            области&nbsp;применения
+          </div>
+          <div
+            className={s.kebabMenuItem}
+            onClick={() => {
+              scrollTo(STEPS_BLOCK_ID);
+              setKebabActive(false);
+            }}
+          >
+            с&nbsp;чего&nbsp;начать
+          </div>
+          <div
+            className={s.kebabMenuItem}
+            onClick={() => {
+              scrollTo(TARIFF_BLOCK_ID);
+              setKebabActive(false);
+            }}
+          >
+            тарифы
+          </div>
+          <div
+            className={s.kebabMenuItem}
+            onClick={() => {
+              scrollTo(FORM_BLOCK_ID);
+              setKebabActive(false);
+            }}
+          >
+            заказать&nbsp;разработку
+          </div>
+
+          <div
+            className={cn(s.kebabMenuItem, s.kebabMenuItemSignIn)}
+            onClick={() => {}}
+          >
+            войти
+          </div>
+        </div>
+      )}
     </div>
   );
 };
