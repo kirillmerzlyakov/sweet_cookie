@@ -2,11 +2,17 @@ import React from "react";
 import cn from "classnames";
 import s1 from "../mainPage.module.less";
 import s from "./formBlock.module.less";
+import imgForm from "./../../media/formImg.png";
 
 export const FORM_BLOCK_ID = "form-block-id";
 
 export const FormBlock: React.FC = () => (
   <div className={s.tariffBlock} id={FORM_BLOCK_ID}>
+    <div className={s.left}>
+      <div className={s.imgForm}>
+        <img src={imgForm} alt="form"></img>
+      </div>
+    </div>
     <div className={s.blockWrapper}>
       <div className={s.title}>
         Расскажите о своем проекте, а мы поможем усовершенствовать его при
@@ -42,7 +48,8 @@ export const FormBlock: React.FC = () => (
             type={"checkbox"}
           ></input>
           <div className={s.checkboxDescription}>
-            Даю согласие на <span className={s.boldText}>обработку персональных данных</span>
+            Даю согласие на{" "}
+            <span className={s.boldText}>обработку персональных данных</span>
           </div>
         </div>
       </div>

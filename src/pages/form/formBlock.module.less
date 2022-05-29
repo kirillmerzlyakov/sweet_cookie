@@ -3,17 +3,19 @@
 :local {
   .tariffBlock {
     .mainBlock;
+    position: relative;
     padding: 100px 141px;
     box-sizing: border-box;
     background-color: #efefef;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    // justify-content: flex-end;
     align-items: center;
   }
 
-  .blockWrapper {
-    width: 663px;
+  .blockWrapper,
+  .left {
+    width: 50%;
   }
 
   .wrapperText {
@@ -121,6 +123,20 @@
     .boldText;
   }
 
+  .imgForm {
+    position: absolute;
+    left: 0;
+    bottom: -60px;
+    height: 700px;
+    width: 695px;
+    img {
+      object-fit: cover;
+      height: 700px;
+
+      width: 695px;
+    }
+  }
+
   //планшет
   @media screen and (max-width: 1024px) {
     .tariffBlock {
@@ -135,6 +151,10 @@
 
     .blockWrapper {
       width: 100%;
+    }
+
+    .left {
+      display: none;
     }
 
     .title {
