@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import s from "./Slider.module.less";
 import cn from "classnames";
 import Img1 from "../../media/slider/1.png";
+import Img2 from "../../media/slider/2.png";
 import Img3 from "../../media/slider/3.png";
 import Img4 from "../../media/slider/4.png";
 import Img5 from "../../media/slider/5.png";
@@ -30,7 +31,7 @@ const slides: Slide[] = [
     ),
   },
   {
-    img: Img1,
+    img: Img2,
     subtitle: <>работа с заявками и&nbsp;их&nbsp;квалификация</>,
     text: (
       <>
