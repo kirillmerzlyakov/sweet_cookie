@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import s from "./Slider.module.less";
 import cn from "classnames";
-import SlideImg from "../../media/slider/3.png";
+import Img1 from "../../media/slider/1.png";
+import Img3 from "../../media/slider/3.png";
 import Img4 from "../../media/slider/4.png";
 import Img5 from "../../media/slider/5.png";
 import Img6 from "../../media/slider/6.png";
@@ -18,7 +19,7 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    img: SlideImg,
+    img: Img1,
     subtitle: "работа с холодными звонками",
     text: (
       <>
@@ -29,7 +30,7 @@ const slides: Slide[] = [
     ),
   },
   {
-    img: SlideImg,
+    img: Img1,
     subtitle: <>работа с заявками и&nbsp;их&nbsp;квалификация</>,
     text: (
       <>
@@ -39,7 +40,7 @@ const slides: Slide[] = [
     ),
   },
   {
-    img: SlideImg,
+    img: Img3,
     subtitle: "автоматизация сервисных звонков",
     text: (
       <>
