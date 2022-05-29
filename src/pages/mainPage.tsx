@@ -12,6 +12,7 @@ import { Footer } from "../components/footer/footer";
 import { scrollTo } from "../components/shared";
 import Img from "./../media/bg_main.png";
 import { Slider } from "../components/slider/Slider";
+import Marquee from "react-fast-marquee";
 
 export const MainPage: React.FC = () => (
   <div className={s.mainPage}>
@@ -42,6 +43,12 @@ export const MainPage: React.FC = () => (
         </div>
       </div>
       <div className={s.bgImg} />
+      <div className={s.marquee}>
+        <Marquee speed={70} gradient={false}>
+          снизьте издержки на поддержку клиентов и продаже до -50%.&nbsp;
+          снизьте издержки на поддержку клиентов и продаже до -50%.&nbsp;
+        </Marquee>
+      </div>
     </div>
     <SecondBlock />
     <Slider />

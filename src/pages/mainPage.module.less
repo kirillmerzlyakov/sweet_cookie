@@ -141,6 +141,10 @@
     background-color: #efefef;
   }
 
+  .marquee {
+    display: none;
+  }
+
   //планшет
   @media screen and (max-width: 1024px) {
     .firstBlock {
@@ -205,6 +209,14 @@
 
     .right {
       display: none;
+    }
+
+    .marquee {
+      display: flex;
+      position: absolute;
+      bottom: 20px;
+      background-color: #ffeb5b;
+      padding: 5px 0;
     }
   }
 
