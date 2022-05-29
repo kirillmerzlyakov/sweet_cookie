@@ -117,6 +117,12 @@
       display: none;
     }
 
+    .logo {
+      height: 20px;
+      width: 134px;
+      // object-fit: cover;
+    }
+
     .kebabIcon {
       display: flex;
       height: 25px;
@@ -180,16 +186,30 @@
       left: 0;
       padding: 20px 0;
       z-index: 10;
+      &:nth-child(1) {
+        transition-delay: 0.56s;
+      }
+      &:nth-child(2) {
+        transition-delay: 1s;
+      }
 
+      &:nth-child(3) {
+        transition-delay: 1s;
+      }
       // transform: translateY(-100% - 50px);
-      // transition: all 0.6s ease-in-out;
+      
     }
 
     .kebabMenuItem {
       padding: 15px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
       &:hover {
         cursor: pointer;
       }
+      transition: all 0.6s ease-in-out;
+
       // transform: scale(1.15) translateY(-30px);
       // opacity: 0;
       // transition: transform 0.5s @cubic, opacity 0.6s @cubic;
@@ -204,6 +224,7 @@
       //     transition-delay: `#{0.56 - (@{index} * 0.07)}s`;
       //   }
       // });
+      
     }
 
     .kebabMenuItemSignIn {
