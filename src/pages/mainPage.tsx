@@ -16,12 +16,9 @@ import { Slider } from "../components/slider/Slider";
 export const MainPage: React.FC = () => (
   <div className={s.mainPage}>
     <div className={s.firstBlock}>
-      <div className={s.circle}></div>
-      <div className={s.circle}></div>
-      <div className={s.circle}></div>
-      <div className={s.bgImg}>
-        <img src={Img} alt="" />
-      </div>
+      <div className={s.circle} />
+      <div className={s.circle} />
+      <div className={s.circle} />
       <div className={s.titleWrapper}>
         <div className={s.left}>
           <div className={s.title}>{voiciaTitle()}</div>
@@ -44,6 +41,7 @@ export const MainPage: React.FC = () => (
           <span className={s.discont}>-50%</span>
         </div>
       </div>
+      <div className={s.bgImg} />
     </div>
     <SecondBlock />
     <Slider />

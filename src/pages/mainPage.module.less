@@ -46,14 +46,15 @@
 
   .bgImg {
     position: absolute;
-    right: 15px;
-    bottom: 10px;
+    right: 20px;
+    bottom: 0;
     z-index: 2;
-
-    > img {
-      width: 750px;
-      height: 750px;
-    }
+    width: 697px;
+    height: 667px;
+    background-image: url("./../media/bg_main.png");
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 
   .titleWrapper {
@@ -102,9 +103,7 @@
     flex-direction: row;
     margin-top: 73px;
     font-size: 20px;
-    > :first-child {
-      margin-right: 15px;
-    }
+    gap: 15px;
   }
 
   .button {
@@ -140,5 +139,78 @@
     flex-direction: column;
     height: 100vh;
     background-color: #efefef;
+  }
+
+  //планшет
+  @media screen and (max-width: 1024px) {
+    .firstBlock {
+      .mainBlock;
+      padding: 30px 0 40px 0;
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      background-color: @blue;
+      justify-content: start;
+      background-position: bottom -58px right 0;
+      overflow: hidden;
+    }
+
+    .bgImg {
+      position: initial;
+      right: 0;
+      top: 188px;
+      // width: 375px;
+      width: 100%;
+
+      height: 390px;
+      // height: auto;
+
+      background-image: url("./../media/bg_main_mobile.png");
+    }
+
+    .left {
+      margin-right: 0;
+    }
+
+    .title {
+      display: none;
+    }
+
+    .subtitle {
+      padding: 0 15px;
+    }
+
+    .description1 {
+      width: 100%;
+      font-size: 16px;
+      line-height: 140%;
+      padding: 0 15px;
+    }
+
+    .buttons {
+      width: 100%;
+      position: absolute;
+      flex-direction: column;
+      padding: 0 15px;
+
+      gap: 10px;
+      bottom: 85px;
+      box-sizing: border-box;
+
+      .button {
+        justify-content: center;
+        font-size: 14px;
+        line-height: 140%;
+      }
+    }
+
+    .right {
+      display: none;
+    }
+  }
+
+  //мобилка
+  @media screen and (max-width: 428px) {
+    .step {
+    }
   }
 }
