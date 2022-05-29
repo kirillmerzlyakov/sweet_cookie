@@ -10,7 +10,6 @@ import { StepsBlock } from "./steps/stepsBlock";
 import { SecondBlock } from "./second/secondBlock";
 import { Footer } from "../components/footer/footer";
 import { scrollTo } from "../components/shared";
-import Img from "./../media/bg_main.png";
 import { Slider } from "../components/slider/Slider";
 import Marquee from "react-fast-marquee";
 

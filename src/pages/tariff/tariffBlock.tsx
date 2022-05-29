@@ -2,7 +2,6 @@ import React from "react";
 import s from "./tariffBlock.module.less";
 import s2 from "../mainPage.module.less";
 import { scrollTo } from "../../components/shared";
-
 import cn from "classnames";
 import { FORM_BLOCK_ID } from "../form/formBlock";
 

@@ -1,8 +1,6 @@
 import { voiciaFooterLogo } from "../../media/mediaSVG";
 import { scrollTo } from "../shared";
-
 import s from "./footer.module.less";
-
 import RobotImg from "../../media/robot_footer.png";
 import { SECOND_BLOCK_ID } from "../../pages/second/secondBlock";
 import { SLIDER_BLOCK_ID } from "../slider/Slider";
