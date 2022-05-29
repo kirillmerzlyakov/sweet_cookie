@@ -94,6 +94,8 @@ export const triangleBig = (isWhite?: boolean) => (
 
 export const triangleMedium = () => (
   <svg
+    width="23"
+    height="26"
     viewBox="0 0 23 26"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -106,11 +108,7 @@ export const triangleMedium = () => (
 );
 
 export const voiciaFooterLogo = () => (
-  <svg
-    viewBox="0 0 250 50"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg viewBox="0 0 250 50" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M0 0.961538H10.6258L23.3905 31.7308L36.1552 0.961538H46.781L25.5295 49.0385H21.2516L0 0.961538Z"
       fill="white"
@@ -139,11 +137,7 @@ export const voiciaFooterLogo = () => (
 );
 
 export const arrowDown = () => (
-  <svg
-    viewBox="0 0 21 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M11.2794 19.6338C10.7912 20.122 9.99978 20.122 9.51162 19.6338L1.55667 11.6789C1.06852 11.1907 1.06852 10.3993 1.55667 9.91112C2.04483 9.42297 2.83628 9.42297 3.32444 9.91112L10.3955 16.9822L17.4666 9.91113C17.9547 9.42297 18.7462 9.42297 19.2343 9.91113C19.7225 10.3993 19.7225 11.1907 19.2343 11.6789L11.2794 19.6338ZM11.6455 0.416626L11.6455 18.75L9.14551 18.75L9.14551 0.416626L11.6455 0.416626Z"
       fill="#1D1D1B"
