@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import s from "./Slider.module.less";
 import cn from "classnames";
-import leftArrow from "./icons/left.svg";
-import rightArrow from "./icons/right.svg";
 import SlideImg from "../../media/slider/3.png";
 import Img4 from "../../media/slider/4.png";
 import Img5 from "../../media/slider/5.png";
+import Img6 from "../../media/slider/6.png";
+
 
 import { triangleMedium } from "../../media/mediaSVG";
 import { scrollTo } from "../shared";
@@ -72,7 +72,7 @@ const slides: Slide[] = [
     ),
   },
   {
-    img: SlideImg,
+    img: Img6,
     subtitle: "массовый подбор персонала",
     text: (
       <>
