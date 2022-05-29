@@ -104,6 +104,7 @@ export const Slider: React.FC<SliderProps> = (props) => {
       >
         {slides.map((slide, i) => (
           <div
+            key={slide.subtitle.toString()}
             className={slideIndex === i ? cn(s.slide, s.slideActive) : s.slide}
             id={`slide-${i}`}
           >
