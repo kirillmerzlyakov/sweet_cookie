@@ -82,6 +82,10 @@
     background-color: @blue;
   }
 
+  .step2 {
+    background-color: @white;
+  }
+
   .step3 {
     background-color: @white;
   }
@@ -92,7 +96,7 @@
 
   .stepTitle {
     font-family: Value Sans Pro Bold;
-    letter-spacing: -1px;
+    -webkit-letter-spacing: -1px;
     font-weight: 500;
     font-size: 35px;
     line-height: 120%;
@@ -117,7 +121,7 @@
     text-shadow: -1px 0px 0px #000000, 1px 0px 0px #000000, 0px -1px 0px #000000,
       0px 3px 0px #000000;
     text-align: center;
-    letter-spacing: 10px;
+    -webkit-letter-spacing: 10px;
   }
 
   .img1 {
@@ -167,7 +171,7 @@
 
   .itemTitle {
     .boldText;
-    letter-spacing: 0;
+    -webkit-letter-spacing: 0;
     font-size: 30px;
     line-height: 120%;
   }
@@ -181,7 +185,7 @@
 
   .itemSmallTitle {
     .boldText;
-    letter-spacing: 0;
+    -webkit-letter-spacing: 0;
     font-size: 25px;
     line-height: 120%;
   }
@@ -264,11 +268,16 @@
       min-width: 200px;
       border-radius: 20px;
       padding: 30px 20px;
+      margin-bottom: 40px;
+    }
+
+    .step3 {
+      display: none;
     }
 
     .img1 {
-      bottom: -50px;
-      right: -50px;
+      bottom: -36px;
+      right: -37px;
     }
 
     .itemsWrapper {
@@ -276,17 +285,17 @@
     }
 
     .item {
-      width: 80px;
+      width: 110px;
       margin-bottom: 20px;
     }
 
     .itemSmall {
-      width: 80px;
+      width: 110px;
       margin-bottom: 20px;
     }
 
     .stepTitle {
-      font-size: 20px;
+      font-size: 24px;
       line-height: 120%;
     }
     .stepdescription {
@@ -310,7 +319,7 @@
     }
 
     .button {
-      font-size: 14px;
+      font-size: 16px;
       .arrowBox {
         width: 15px;
         height: 15px;
