@@ -13,10 +13,8 @@ export const Footer = () => (
     <div className={s.textBlock}>
       <div className={s.text1}>{voiciaLogo("#fff")}</div>
       <div className={s.text2}>
-        <b>
-          <span className={s.textBlue}>снизьте издержки</span> на поддержку
-          клиентов и продаже до –50%
-        </b>
+        <span className={s.textBlue}>снизьте издержки</span> на поддержку
+        клиентов и продаже до –50%
       </div>
     </div>
 

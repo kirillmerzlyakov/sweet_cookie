@@ -133,7 +133,7 @@ export const Slider: React.FC<SliderProps> = (props) => {
               >
                 <div className={s.subtitle}>
                   <div className={s.playMobile}>{renderPlay()}</div>
-                  <b>{slides[i].subtitle}</b>
+                  {slides[i].subtitle}
                 </div>
                 <div className={s.text}>{slides[i].text}</div>
                 <div className={s.playDesk}>{renderPlay()}</div>
@@ -161,11 +161,9 @@ export const Slider: React.FC<SliderProps> = (props) => {
 
 const renderTitle = () => (
   <div className={s.title}>
-    <b>
-      <span className={s.blueText}>знакомьтесь: voicia – </span>
-      интеллектуальный <br />
-      голосовой робот
-    </b>
+    <span className={s.blueText}>знакомьтесь: voicia – </span>
+    интеллектуальный <br />
+    голосовой робот
   </div>
 );
 
