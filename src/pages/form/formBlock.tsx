@@ -9,9 +9,6 @@ export const FORM_BLOCK_ID = "form-block-id";
 export const FormBlock: React.FC = () => (
   <div className={s.tariffBlock} id={FORM_BLOCK_ID}>
     <div className={s.left}>
-      <div className={s.imgForm}>
-        <img src={imgForm} alt="form"></img>
-      </div>
     </div>
     <div className={s.blockWrapper}>
       <div className={s.title}>
