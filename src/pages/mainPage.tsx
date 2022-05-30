@@ -1,5 +1,5 @@
 import React from "react";
-import { triangle, voiciaTitle1 } from "../media/mediaSVG";
+import { triangle, voiciaLogo } from "../media/mediaSVG";
 import { BlackBlock } from "./black/blackBlock";
 import s from "./mainPage.module.less";
 import cn from "classnames";
@@ -21,7 +21,7 @@ export const MainPage: React.FC = () => (
       <div className={s.circle} />
       <div className={s.titleWrapper}>
         <div className={s.left}>
-          <div className={s.title}>{voiciaTitle1("#1D1D1B")}</div>
+          <div className={s.title}>{voiciaLogo()}</div>
           <div className={s.subtitle}>интеллектуальный голосовой робот</div>
           <div className={s.description1}>
             интеллектуальный голосовой робот, который работает с клиентами от

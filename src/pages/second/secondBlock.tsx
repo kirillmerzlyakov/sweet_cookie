@@ -3,7 +3,7 @@ import s from "./secondBlock.module.less";
 import cn from "classnames";
 import Img1 from "../../media/man1.png";
 import Img2 from "../../media/man2.png";
-import { arrowDown, triangleBig } from "../../media/mediaSVG";
+import { arrowDown, triangle } from "../../media/mediaSVG";
 
 export const SECOND_BLOCK_ID = "second-block-id";
 
@@ -53,7 +53,7 @@ export const SecondBlock: React.FC = () => (
               </div>
             </div>
 
-            <div className={s.play}>{triangleBig()}</div>
+            <div className={s.play}>{triangle()}</div>
           </div>
 
         <div className={cn(s.step, s.step2)}>
@@ -83,7 +83,7 @@ export const SecondBlock: React.FC = () => (
               {renderItem("180₽", "цена заявки")}
             </div>
           </div>
-          <div className={cn(s.play)}>{triangleBig()}</div>
+          <div className={cn(s.play)}>{triangle()}</div>
         </div>
       </div>
 
@@ -120,7 +120,7 @@ export const SecondBlock: React.FC = () => (
               </div>
             </div>
           </div>
-          <div className={cn(s.play)}>{triangleBig()}</div>
+          <div className={cn(s.play)}>{triangle()}</div>
         </div>
 
         <div className={cn(s.step, s.step4)}>
@@ -164,7 +164,7 @@ export const SecondBlock: React.FC = () => (
               {renderItem("19₽", "цена участника вебинара")}
             </div>
           </div>
-          <div className={cn(s.play, s.playWhite)}>{triangleBig(true)}</div>
+          <div className={s.play}>{triangle("#fff")}</div>
         </div>
       </div>
       <div className={s.buttons}>

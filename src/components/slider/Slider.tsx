@@ -7,7 +7,7 @@ import Img3 from "../../media/slider/3.png";
 import Img4 from "../../media/slider/4.png";
 import Img5 from "../../media/slider/5.png";
 import Img6 from "../../media/slider/6.png";
-import { triangleMedium } from "../../media/mediaSVG";
+import { triangle } from "../../media/mediaSVG";
 import { scrollTo } from "../shared";
 
 export const SLIDER_BLOCK_ID = "slider-block-id";
@@ -169,4 +169,4 @@ const renderTitle = () => (
   </div>
 );
 
-const renderPlay = () => <div className={s.play}>{triangleMedium()}</div>;
+const renderPlay = () => <div className={s.play}>{triangle()}</div>;

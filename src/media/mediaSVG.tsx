@@ -1,4 +1,4 @@
-export const voiciaTitle1 = (color: string) => (
+export const voiciaLogo = (color: string = "#1D1D1B") => (
   <svg
     viewBox="0 0 653 146"
     fill={color}
@@ -14,50 +14,12 @@ export const voiciaTitle1 = (color: string) => (
   </svg>
 );
 
-export const triangle = () => (
-  <svg
-    width="14"
-    height="16"
-    viewBox="0 0 14 16"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M13.5 8L-7.34099e-07 15.7942L-5.27059e-08 0.205771L13.5 8Z"
-      fill="#1D1D1B"
-    />
+export const triangle = (color: string = "#1D1D1B") => (
+  <svg viewBox="0 0 31 36" fill={color} xmlns="http://www.w3.org/2000/svg">
+    <path d="M30.998 18L0.998045 35.3205L0.998047 0.67949L30.998 18Z" />
   </svg>
 );
 
-export const triangleBig = (isWhite?: boolean) => (
-  <svg
-    width="31"
-    height="36"
-    viewBox="0 0 31 36"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M30.998 18L0.998045 35.3205L0.998047 0.67949L30.998 18Z"
-      fill={isWhite ? "#fff" : "#1D1D1B"}
-    />
-  </svg>
-);
-
-export const triangleMedium = () => (
-  <svg
-    width="23"
-    height="26"
-    viewBox="0 0 23 26"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M22.2852 13.2857L0.856583 25.6575L0.856584 0.913921L22.2852 13.2857Z"
-      fill="#1D1D1B"
-    />
-  </svg>
-);
 
 export const arrowDown = () => (
   <svg viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
