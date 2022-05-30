@@ -54,6 +54,10 @@
     display: flex;
     align-items: center;
     margin-right: 50px;
+    svg {
+      width: 134px;
+      height: 30px;
+    }
   }
 
   .hover {
@@ -118,9 +122,10 @@
     }
 
     .logo {
-      height: 20px;
-      width: 134px;
-      // object-fit: cover;
+      svg {
+        height: 30px;
+        width: 134px;
+      }
     }
 
     .kebabIcon {
@@ -197,7 +202,6 @@
         transition-delay: 1s;
       }
       // transform: translateY(-100% - 50px);
-      
     }
 
     .kebabMenuItem {
@@ -224,7 +228,6 @@
       //     transition-delay: `#{0.56 - (@{index} * 0.07)}s`;
       //   }
       // });
-      
     }
 
     .kebabMenuItemSignIn {

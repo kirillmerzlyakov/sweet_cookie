@@ -7,7 +7,7 @@ import { SLIDER_BLOCK_ID } from "../slider/Slider";
 import { scrollTo } from "../shared";
 import s from "./header.module.less";
 import cn from "classnames";
-import { voiciaHeader } from "../../media/mediaSVG";
+import { voiciaTitle1 } from "../../media/mediaSVG";
 
 export const Header: React.FC = () => {
   const headerRef = React.useRef<HTMLHeadingElement>(null);
@@ -26,7 +26,7 @@ export const Header: React.FC = () => {
 
   return (
     <div className={s.header} ref={headerRef}>
-      <div className={s.logo}>{voiciaHeader()}</div>
+      <div className={s.logo}>{voiciaTitle1("#1D1D1B")}</div>
       <div className={s.nav}>
         {renderTile(<>кейсы</>, SECOND_BLOCK_ID)}
         {renderTile(<>области&nbsp;применения</>, SLIDER_BLOCK_ID)}
