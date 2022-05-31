@@ -2,14 +2,12 @@ import React from "react";
 import cn from "classnames";
 import s1 from "../mainPage.module.less";
 import s from "./formBlock.module.less";
-import imgForm from "./../../media/formImg.png";
 
 export const FORM_BLOCK_ID = "form-block-id";
 
 export const FormBlock: React.FC = () => (
   <div className={s.tariffBlock} id={FORM_BLOCK_ID}>
-    <div className={s.left}>
-    </div>
+    <div className={s.left}></div>
     <div className={s.blockWrapper}>
       <div className={s.title}>
         Расскажите о своем проекте, а мы поможем усовершенствовать его при
@@ -33,16 +31,24 @@ export const FormBlock: React.FC = () => (
             className={s.checkbox}
             placeholder="имя"
             type={"checkbox"}
+            defaultChecked
           ></input>
           <div className={s.checkboxDescription}>
             Да, я хочу получать новостную рассылку о Voicia
           </div>
         </div>
         <div className={s.checkboxRow}>
+          {/* <label className={s.container}>
+            <input type="checkbox" />
+            Two
+            <span className={s.checkmark}></span>
+          </label> */}
+
           <input
             className={s.checkbox}
             placeholder="имя"
             type={"checkbox"}
+            defaultChecked
           ></input>
           <div className={s.checkboxDescription}>
             Даю согласие на{" "}
