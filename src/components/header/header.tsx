@@ -15,6 +15,7 @@ export const Header: React.FC = () => {
   React.useEffect(() => {
     var scrollPrev = 0;
     const onScroll = function () {
+      setKebabActive(false);
       const scrolled = document.documentElement.scrollTop;
       scrolled < scrollPrev && scrolled > 1
         ? headerRef?.current?.classList.add(s.headerFixed)
