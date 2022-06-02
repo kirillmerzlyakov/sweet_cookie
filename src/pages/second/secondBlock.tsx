@@ -3,6 +3,7 @@ import s from "./secondBlock.module.less";
 import cn from "classnames";
 import Img1 from "../../media/man1.png";
 import Img2 from "../../media/man2.png";
+import Img2_mobile from "../../media/step2_mobile.png";
 import { arrowDown, triangle } from "../../media/mediaSVG";
 
 export const SECOND_BLOCK_ID = "second-block-id";
@@ -12,59 +13,63 @@ export const SecondBlock: React.FC = () => (
     <div className={s.wrapperSteps}>
       <div className={s.stepsRow}>
         <div className={cn(s.step, s.step1)}>
-            <div className={s.stepTitle}>
-              Внедрение голосового бота для маркетингового агентства Flow Agency
-            </div>
-            <div className={s.stepdescription}>
-              Делегирование рутинного процесса обзвона клиентов с менеджеров
-              на робота VOICIA
-            </div>
-            <div className={s.itemsWrapper}>
-              <div className={s.row}>
-                {renderSmallItem("600", <>звонков/день 3&nbsp;менеджера</>)}
-                {renderSmallItem(
-                  "22%",
-                  <>
-                    процент
-                    <br />
-                    конверсии
-                  </>
-                )}
-                {renderSmallItem("32₽", "цена участника вебинара")}
-              </div>
-              <div className={s.row}>
-                {renderItem(
-                  "6000",
-                  <>
-                    звонков
-                    <br />
-                    за&nbsp;полчаса
-                  </>
-                )}
-                {renderItem(
-                  "19%",
-                  <>
-                    процент
-                    <br />
-                    конверсии
-                  </>
-                )}
-                {renderItem("19₽", "цена участника вебинара")}
-              </div>
-            </div>
-
-            <div className={s.play}>{triangle()}</div>
+          <div className={s.stepTitle}>
+            Внедрение голосового бота для маркетингового агентства Flow Agency
           </div>
+          <div className={s.stepdescription}>
+            Делегирование рутинного процесса обзвона клиентов с менеджеров
+            на робота VOICIA
+          </div>
+          <div className={s.itemsWrapper}>
+            <div className={s.row}>
+              {renderSmallItem("600", <>звонков/день 3&nbsp;менеджера</>)}
+              {renderSmallItem(
+                "22%",
+                <>
+                  процент
+                  <br />
+                  конверсии
+                </>
+              )}
+              {renderSmallItem("32₽", "цена участника вебинара")}
+            </div>
+            <div className={s.row}>
+              {renderItem(
+                "6000",
+                <>
+                  звонков
+                  <br />
+                  за&nbsp;полчаса
+                </>
+              )}
+              {renderItem(
+                "19%",
+                <>
+                  процент
+                  <br />
+                  конверсии
+                </>
+              )}
+              {renderItem("19₽", "цена участника вебинара")}
+            </div>
+          </div>
+
+          <div className={s.play}>{triangle()}</div>
+        </div>
 
         <div className={cn(s.step, s.step2)}>
           <div className={s.stepTitle}>
             Лидогенерация холодной базы для Агентства Недвижимости
           </div>
           <div className={s.stepdescription}>
-            Заменили первую линию колл-центра и снизили стоимость заявки на 33%
+            Заменили первую линию колл-центра и&nbsp;снизили стоимость заявки на
+            33%
           </div>
           <div className={s.img1}>
-            <img src={Img2} alt="man1"></img>
+            <img
+              src={window.screen.availWidth > 1024 ? Img2 : Img2_mobile}
+              alt="man1"
+            ></img>
           </div>
 
           <div className={s.itemsWrapper}>
@@ -174,7 +179,6 @@ export const SecondBlock: React.FC = () => (
         </div>
       </div>
     </div>
-
   </div>
 );
 
