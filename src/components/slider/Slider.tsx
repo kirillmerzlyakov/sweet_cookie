@@ -104,7 +104,7 @@ export const Slider: React.FC<SliderProps> = (props) => {
       >
         {slides.map((slide, i) => (
           <div
-            key={slide.subtitle.toString()}
+            key={typeof slide.subtitle === "string" ? slide.subtitle : i}
             className={slideIndex === i ? cn(s.slide, s.slideActive) : s.slide}
             id={`slide-${i}`}
           >
@@ -116,7 +116,7 @@ export const Slider: React.FC<SliderProps> = (props) => {
                 )
               }
             >
-              <div key={slide.subtitle.toString()} className={s.slideImg}>
+              <div className={s.slideImg}>
                 <img src={slide.img} alt="картинка" />
               </div>
             </div>
@@ -146,7 +146,11 @@ export const Slider: React.FC<SliderProps> = (props) => {
       <div className={s.dots}>
         {slides.map((slide, i) => (
           <div
-            key={slide.subtitle.toString()}
+            key={
+              typeof slide.subtitle === "string"
+                ? "slide-" + slide.subtitle
+                : "slide-" + i
+            }
             className={cn(s.dot, i === slideIndex && s.activeDot)}
             onClick={() => {
               setSlideIndex(i);
