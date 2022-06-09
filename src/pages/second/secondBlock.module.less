@@ -31,20 +31,12 @@
     color: @blue;
   }
 
-  .subtitle {
-    margin: 15px auto 0 auto;
-    text-align: center;
-    width: 679px;
-    font-size: 20px;
-    line-height: 140%;
-    color: @black;
-  }
-
   .wrapperSteps {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
+    gap: 40px;
   }
 
   .stepsRow {
@@ -52,18 +44,18 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
+    gap: 40px;
   }
 
   .step {
-    width: 630px;
-    min-width: 500px;
+    max-width: 630px;
+    width: calc(50% - 20px);
+    min-width: 416px;
     height: 560px;
     position: relative;
     box-sizing: border-box;
     border-radius: 50px;
     border: @black 1px solid;
-    margin-bottom: 60px;
-
     padding: 50px 40px;
     box-shadow: -1px 0px 0px #000000, 1px 0px 0px #000000, 0px -1px 0px #000000,
       0px 3px 0px #000000;
@@ -270,6 +262,10 @@
   @media screen and (max-width: 1024px) {
     .tariffBlock {
       padding: 60px 15px 50px 15px;
+    }
+
+    .stepsRow {
+      justify-content: center;
     }
 
     .step {

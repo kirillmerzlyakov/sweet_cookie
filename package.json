@@ -26,7 +26,7 @@
     "typescript": "^4.4.4"
   },
   "scripts": {
-    "start": "set HTTPS=true&&rescripts start",
+    "start": "rescripts start",
     "build": "rescripts build",
     "test": "rescripts test",
     "eject": "rescripts eject"
