@@ -8,7 +8,7 @@ export const FormBlock: React.FC = () => {
   React.useEffect(() => {
     const docCreateElem = document.createElement("script");
     docCreateElem.src =
-      "https://forms.amocrm.ru/forms/assets/js/amoforms.js?1654540677";
+      "https://forms.amocrm.ru/forms/assets/js/amoforms.js?1654811770";
     docCreateElem.id = "amoforms_script_942334";
     myRef.current!.appendChild(docCreateElem);
     require("./amoScript");
