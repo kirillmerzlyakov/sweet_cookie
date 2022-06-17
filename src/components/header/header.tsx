@@ -9,6 +9,8 @@ import s from "./header.module.less";
 import cn from "classnames";
 import { voiciaLogo } from "../../media/mediaSVG";
 
+const VOICIA_URL = "https://app.voicia.ru";
+
 export const Header: React.FC = () => {
   const headerRef = React.useRef<HTMLHeadingElement>(null);
   const [kebabActive, setKebabActive] = React.useState(false);
@@ -35,7 +37,9 @@ export const Header: React.FC = () => {
         {renderTile(<>тарифы</>, TARIFF_BLOCK_ID)}
         {renderTile(<>заказать&nbsp;разработку</>, FORM_BLOCK_ID)}
       </div>
-      <div className={s.signIn}>войти</div>
+      <a href={VOICIA_URL} rel="noreferrer">
+        <div className={s.signIn}>войти</div>
+      </a>
       <div
         className={cn(s.kebabIcon, kebabActive && s.kebabIconActive)}
         onClick={() => setKebabActive(!kebabActive)}
@@ -93,12 +97,11 @@ export const Header: React.FC = () => {
             заказать&nbsp;разработку
           </div>
 
-          <div
-            className={cn(s.kebabMenuItem, s.kebabMenuItemSignIn)}
-            onClick={() => {}}
-          >
-            войти
-          </div>
+          <a href={VOICIA_URL} rel="noreferrer">
+            <div className={cn(s.kebabMenuItem, s.kebabMenuItemSignIn)}>
+              войти
+            </div>
+          </a>
         </div>
       )}
     </div>
