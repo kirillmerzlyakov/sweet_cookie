@@ -72,7 +72,10 @@ export const MainPage: React.FC = () => {
           </Marquee>
         </div>
       </div>
-      <SecondBlock players={players as Players} togglePlay={toggle as ToggleFunc}/>
+      <SecondBlock
+        players={players as Players}
+        togglePlay={toggle as ToggleFunc}
+      />
       <Slider players={players as Players} togglePlay={toggle as ToggleFunc} />
       <BlackBlock />
       <StepsBlock />
@@ -106,22 +109,22 @@ let defaultSources: Sources = {
   main: {
     audio: new Audio(AudioMainSrc),
   },
-  slider_0: {
+  slider_1: {
     audio: new Audio(Audio1Src),
   },
-  slider_1: {
+  slider_2: {
     audio: new Audio(Audio2Src),
   },
-  slider_2: {
+  slider_3: {
     audio: new Audio(Audio3Src),
   },
-  slider_3: {
+  slider_4: {
     audio: new Audio(Audio4Src),
   },
-  slider_4: {
+  slider_5: {
     audio: new Audio(Audio5Src),
   },
-  slider_5: {
+  slider_6: {
     audio: new Audio(Audio6Src),
   },
   second_market: {
@@ -140,12 +143,12 @@ let defaultSources: Sources = {
 
 const defaultPlayers: Players = {
   main: { playing: false },
-  slider_0: { playing: false },
   slider_1: { playing: false },
   slider_2: { playing: false },
   slider_3: { playing: false },
   slider_4: { playing: false },
   slider_5: { playing: false },
+  slider_6: { playing: false },
   second_market: { playing: false },
   second_base: { playing: false },
   second_couriers: { playing: false },

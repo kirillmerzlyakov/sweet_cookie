@@ -17,6 +17,7 @@ interface Slide {
   img: string;
   subtitle: string | JSX.Element;
   text: JSX.Element;
+  audio_key: string;
 }
 
 const slides: Slide[] = [
@@ -30,6 +31,7 @@ const slides: Slide[] = [
         и&nbsp;любым объемом
       </>
     ),
+    audio_key: "slider_1",
   },
   {
     img: Img2,
@@ -40,6 +42,7 @@ const slides: Slide[] = [
         договорится о&nbsp;встречезвонке или сам отправит КП
       </>
     ),
+    audio_key: "slider_2",
   },
   {
     img: Img3,
@@ -51,6 +54,7 @@ const slides: Slide[] = [
         возражения
       </>
     ),
+    audio_key: "slider_3",
   },
   {
     img: Img4,
@@ -61,6 +65,7 @@ const slides: Slide[] = [
         актуальных данных из&nbsp;ваших CRM или&nbsp;баз&nbsp;данных
       </>
     ),
+    audio_key: "slider_4",
   },
   {
     img: Img5,
@@ -71,6 +76,7 @@ const slides: Slide[] = [
         в&nbsp;формате диалога, как &laquo;настоящий человек
       </>
     ),
+    audio_key: "slider_5",
   },
   {
     img: Img6,
@@ -82,6 +88,7 @@ const slides: Slide[] = [
         месяцы рутинных работ у&nbsp;вашего hr&rsquo;а
       </>
     ),
+    audio_key: "slider_6",
   },
 ];
 
@@ -109,7 +116,7 @@ export const Slider: React.FC<SliderProps> = (props) => {
       >
         {slides.map((slide, i) => (
           <div
-            key={typeof slide.subtitle === "string" ? slide.subtitle : i}
+            key={slide.audio_key}
             className={slideIndex === i ? cn(s.slide, s.slideActive) : s.slide}
             id={`slide-${i}`}
           >
@@ -138,17 +145,20 @@ export const Slider: React.FC<SliderProps> = (props) => {
               >
                 <div className={s.subtitle}>
                   <div className={s.playMobile}>
-                    {renderPlay(players[getAuioId(i)], () =>
-                      togglePlay(getAuioId(i))
-                    )}
+                    {renderPlay(players[slide.audio_key], () => {
+                      console.log(slide.audio_key);
+                      togglePlay(slide.audio_key);
+                    })}
                   </div>
                   {slides[i].subtitle}
                 </div>
                 <div className={s.text}>{slides[i].text}</div>
                 <div className={s.playDesk}>
-                  {renderPlay(players[getAuioId(i)], () =>
-                    togglePlay(getAuioId(i))
-                  )}
+                  {renderPlay(players[slide.audio_key], () => {
+                    console.log(slide.audio_key);
+
+                    togglePlay(slide.audio_key);
+                  })}
                 </div>
               </div>
             </div>
@@ -189,5 +199,3 @@ const renderPlay = (player: Player, toggle: () => void) => (
     {triangle(player.playing ? "#b0d1fb" : undefined)}
   </div>
 );
-
-const getAuioId = (i: number) => `slider_${i}`;
