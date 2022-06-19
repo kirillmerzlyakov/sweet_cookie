@@ -9,12 +9,7 @@ import Img5 from "../../media/slider/5.png";
 import Img6 from "../../media/slider/6.png";
 import { triangle } from "../../media/mediaSVG";
 import { scrollTo } from "../shared";
-import Audio1Src from "../../media/audio/slider_cold_calls.mp3";
-import Audio2Src from "../../media/audio/slider_applications.mp3";
-import Audio3Src from "../../media/audio/slider_auto_service_calls.mp3";
-import Audio4Src from "../../media/audio/slider_consultation_client.mp3";
-import Audio5Src from "../../media/audio/slider_polls.mp3";
-import Audio6Src from "../../media/audio/slider_staff.mp3";
+import { Player, Players } from "../../pages/mainPage";
 
 export const SLIDER_BLOCK_ID = "slider-block-id";
 
@@ -22,7 +17,6 @@ interface Slide {
   img: string;
   subtitle: string | JSX.Element;
   text: JSX.Element;
-  audioSrc: string;
 }
 
 const slides: Slide[] = [
@@ -36,7 +30,6 @@ const slides: Slide[] = [
         и&nbsp;любым объемом
       </>
     ),
-    audioSrc: Audio1Src,
   },
   {
     img: Img2,
@@ -47,7 +40,6 @@ const slides: Slide[] = [
         договорится о&nbsp;встречезвонке или сам отправит КП
       </>
     ),
-    audioSrc: Audio2Src,
   },
   {
     img: Img3,
@@ -59,7 +51,6 @@ const slides: Slide[] = [
         возражения
       </>
     ),
-    audioSrc: Audio3Src,
   },
   {
     img: Img4,
@@ -70,7 +61,6 @@ const slides: Slide[] = [
         актуальных данных из&nbsp;ваших CRM или&nbsp;баз&nbsp;данных
       </>
     ),
-    audioSrc: Audio4Src,
   },
   {
     img: Img5,
@@ -81,7 +71,6 @@ const slides: Slide[] = [
         в&nbsp;формате диалога, как &laquo;настоящий человек
       </>
     ),
-    audioSrc: Audio5Src,
   },
   {
     img: Img6,
@@ -93,23 +82,17 @@ const slides: Slide[] = [
         месяцы рутинных работ у&nbsp;вашего hr&rsquo;а
       </>
     ),
-    audioSrc: Audio6Src,
   },
 ];
 
-interface SliderProps {}
-
-interface Player {
-  playing: boolean;
+interface SliderProps {
+  players: Players;
+  togglePlay: (id: string) => void;
 }
-type Func = (i: number) => () => void;
 
 export const Slider: React.FC<SliderProps> = (props) => {
   const [slideIndex, setSlideIndex] = useState(0);
-
-  const [players, toggle] = useMultiAudio(
-    slides.map((slide) => slide.audioSrc)
-  );
+  const { players, togglePlay } = props;
 
   return (
     <div className={s.containerSlider} id={SLIDER_BLOCK_ID}>
@@ -155,16 +138,16 @@ export const Slider: React.FC<SliderProps> = (props) => {
               >
                 <div className={s.subtitle}>
                   <div className={s.playMobile}>
-                    {renderPlay((players as Player[])[i], () =>
-                      (toggle as Func)(i)
+                    {renderPlay(players[getAuioId(i)], () =>
+                      togglePlay(getAuioId(i))
                     )}
                   </div>
                   {slides[i].subtitle}
                 </div>
                 <div className={s.text}>{slides[i].text}</div>
                 <div className={s.playDesk}>
-                  {renderPlay((players as Player[])[i], () =>
-                    (toggle as Func)(i)
+                  {renderPlay(players[getAuioId(i)], () =>
+                    togglePlay(getAuioId(i))
                   )}
                 </div>
               </div>
@@ -207,60 +190,4 @@ const renderPlay = (player: Player, toggle: () => void) => (
   </div>
 );
 
-const useMultiAudio = (urls: string[]) => {
-  const sources = useMemo(
-    () =>
-      urls.map((url) => ({
-        url,
-        audio: new Audio(url),
-      })),
-    []
-  );
-
-  const [players, setPlayers] = useState(
-    urls.map((url) => ({
-      playing: false,
-    }))
-  );
-
-  const toggle = (targetIndex: number) => {
-    const newPlayers = [...players];
-    const currentIndex = players.findIndex((p) => p.playing);
-    if (currentIndex !== -1 && currentIndex !== targetIndex) {
-      newPlayers[currentIndex].playing = false;
-      newPlayers[targetIndex].playing = true;
-    } else if (currentIndex !== -1) {
-      newPlayers[targetIndex].playing = false;
-    } else {
-      newPlayers[targetIndex].playing = true;
-    }
-    setPlayers(newPlayers);
-  };
-
-  useEffect(() => {
-    sources.forEach((source, i) => {
-      players[i].playing ? source.audio.play() : source.audio.pause();
-    });
-  }, [sources, players]);
-
-  useEffect(() => {
-    sources.forEach((source, i) => {
-      source.audio.addEventListener("ended", () => {
-        const newPlayers = [...players];
-        newPlayers[i].playing = false;
-        setPlayers(newPlayers);
-      });
-    });
-    return () => {
-      sources.forEach((source, i) => {
-        source.audio.removeEventListener("ended", () => {
-          const newPlayers = [...players];
-          newPlayers[i].playing = false;
-          setPlayers(newPlayers);
-        });
-      });
-    };
-  }, []);
-
-  return [players, toggle];
-};
+const getAuioId = (i: number) => `slider_${i}`;

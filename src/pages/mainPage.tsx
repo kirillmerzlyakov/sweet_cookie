@@ -12,10 +12,18 @@ import { Footer } from "../components/footer/footer";
 import { scrollTo } from "../components/shared";
 import { Slider } from "../components/slider/Slider";
 import Marquee from "react-fast-marquee";
-import AudioSrc from "./../media/audio/main.mp3";
+
+import AudioMainSrc from "../media/audio/main.mp3";
+
+import Audio1Src from "../media/audio/slider_cold_calls.mp3";
+import Audio2Src from "../media/audio/slider_applications.mp3";
+import Audio3Src from "../media/audio/slider_auto_service_calls.mp3";
+import Audio4Src from "../media/audio/slider_consultation_client.mp3";
+import Audio5Src from "../media/audio/slider_polls.mp3";
+import Audio6Src from "../media/audio/slider_staff.mp3";
 
 export const MainPage: React.FC = () => {
-  const [playing, toggle] = useAudio(AudioSrc);
+  const [players, toggle] = useNewMultiAudio();
   return (
     <div className={s.mainPage}>
       <div className={s.firstBlock}>
@@ -36,12 +44,12 @@ export const MainPage: React.FC = () => {
               </div>
               <div
                 className={cn(s.button, s.buttonWhite)}
-                onClick={() => {
-                  (toggle as () => void)();
-                }}
+                onClick={() => (toggle as ToggleFunc)("main")}
               >
-                {triangle(playing ? "#b0d1fb" : undefined)}&nbsp; познакомиться
-                с voicia
+                {triangle(
+                  (players as Players)["main"].playing ? "#b0d1fb" : undefined
+                )}
+                &nbsp; познакомиться с voicia
               </div>
             </div>
           </div>
@@ -59,7 +67,7 @@ export const MainPage: React.FC = () => {
         </div>
       </div>
       <SecondBlock />
-      <Slider />
+      <Slider players={players as Players} togglePlay={toggle as ToggleFunc} />
       <BlackBlock />
       <StepsBlock />
       <TariffBlock />
@@ -70,20 +78,99 @@ export const MainPage: React.FC = () => {
   );
 };
 
-const useAudio = (src: string) => {
-  const audio = useMemo(() => new Audio(src), []);
-  const [playing, setPlaying] = useState(false);
+type ToggleFunc = (i: string) => () => void;
+
+interface Source {
+  audio: HTMLAudioElement;
+}
+
+interface Sources {
+  [id: string]: Source;
+}
+
+export interface Player {
+  playing: boolean;
+}
+
+export interface Players {
+  [id: string]: Player;
+}
+
+let defaultSources: Sources = {
+  main: {
+    audio: new Audio(AudioMainSrc),
+  },
+  slider_0: {
+    audio: new Audio(Audio1Src),
+  },
+  slider_1: {
+    audio: new Audio(Audio2Src),
+  },
+  slider_2: {
+    audio: new Audio(Audio3Src),
+  },
+  slider_3: {
+    audio: new Audio(Audio4Src),
+  },
+  slider_4: {
+    audio: new Audio(Audio5Src),
+  },
+  slider_5: {
+    audio: new Audio(Audio6Src),
+  },
+};
+
+const defaultPlayers: Players = {
+  main: { playing: false },
+  slider_0: { playing: false },
+  slider_1: { playing: false },
+  slider_2: { playing: false },
+  slider_3: { playing: false },
+  slider_4: { playing: false },
+  slider_5: { playing: false },
+};
+
+const useNewMultiAudio = () => {
+  const sources = useMemo(() => defaultSources, []);
+  const [players, setPlayers] = useState(defaultPlayers);
+
+  const toggle = (targetIndex: string) => {
+    let newPlayers = { ...players };
+    for (let id in players) {
+      if (id === targetIndex) {
+        newPlayers[id].playing = !newPlayers[id].playing;
+        continue;
+      }
+      newPlayers[id].playing = false;
+    }
+    setPlayers(newPlayers);
+  };
 
   useEffect(() => {
-    playing ? audio.play() : audio.pause();
-  }, [playing]);
+    for (let i in sources) {
+      players[i].playing ? sources[i].audio.play() : sources[i].audio.pause();
+    }
+  }, [sources, players]);
 
   useEffect(() => {
-    audio.addEventListener("ended", () => setPlaying(false));
+    for (let i in sources) {
+      sources[i].audio.addEventListener("ended", () => {
+        const newPlayers = { ...players };
+        newPlayers[i].playing = false;
+        setPlayers(newPlayers);
+      });
+    }
+
     return () => {
-      audio.removeEventListener("ended", () => setPlaying(false));
+      for (let i in sources) {
+        sources[i].audio.removeEventListener("ended", () => {
+          const newPlayers = { ...players };
+          newPlayers[i].playing = false;
+          setPlayers(newPlayers);
+        });
+      }
     };
   }, []);
 
-  return [playing, () => setPlaying(!playing)];
+  return [players, toggle];
 };
