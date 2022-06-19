@@ -15,10 +15,7 @@ import Marquee from "react-fast-marquee";
 import AudioSrc from "./../media/audio/main.mp3";
 
 export const MainPage: React.FC = () => {
-  const audio = useMemo(() => new Audio(AudioSrc), []);
-  const [play, setPlay] = useState(false);
-
-  React.useEffect(() => {}, []);
+  const [playing, toggle] = useAudio(AudioSrc);
   return (
     <div className={s.mainPage}>
       <div className={s.firstBlock}>
@@ -40,11 +37,11 @@ export const MainPage: React.FC = () => {
               <div
                 className={cn(s.button, s.buttonWhite)}
                 onClick={() => {
-                  play ? audio.pause() : audio.play();
-                  setPlay(!play);
+                  (toggle as () => void)();
                 }}
               >
-                {triangle(play ? "#b0d1fb": undefined)}&nbsp; познакомиться с voicia
+                {triangle(playing ? "#b0d1fb" : undefined)}&nbsp; познакомиться
+                с voicia
               </div>
             </div>
           </div>
@@ -71,4 +68,22 @@ export const MainPage: React.FC = () => {
       <Footer />
     </div>
   );
+};
+
+const useAudio = (src: string) => {
+  const audio = useMemo(() => new Audio(src), []);
+  const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    playing ? audio.play() : audio.pause();
+  }, [playing]);
+
+  useEffect(() => {
+    audio.addEventListener("ended", () => setPlaying(false));
+    return () => {
+      audio.removeEventListener("ended", () => setPlaying(false));
+    };
+  }, []);
+
+  return [playing, () => setPlaying(!playing)];
 };
