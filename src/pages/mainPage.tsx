@@ -13,6 +13,7 @@ import { scrollTo } from "../components/shared";
 import { Slider } from "../components/slider/Slider";
 import Marquee from "react-fast-marquee";
 
+//import audio
 import AudioMainSrc from "../media/audio/main.mp3";
 
 import Audio1Src from "../media/audio/slider_cold_calls.mp3";
@@ -21,6 +22,11 @@ import Audio3Src from "../media/audio/slider_auto_service_calls.mp3";
 import Audio4Src from "../media/audio/slider_consultation_client.mp3";
 import Audio5Src from "../media/audio/slider_polls.mp3";
 import Audio6Src from "../media/audio/slider_staff.mp3";
+
+import AudioSecondMarketSrc from "../media/audio/second_market.mp3";
+import AudioSecondColdBaseSrc from "../media/audio/second_cold_base.mp3";
+import AudioSecondCouriersSrc from "../media/audio/second_couriers.mp3";
+import AudioSecondEcoSrc from "../media/audio/second_eco.mp3";
 
 export const MainPage: React.FC = () => {
   const [players, toggle] = useNewMultiAudio();
@@ -66,7 +72,7 @@ export const MainPage: React.FC = () => {
           </Marquee>
         </div>
       </div>
-      <SecondBlock />
+      <SecondBlock players={players as Players} togglePlay={toggle as ToggleFunc}/>
       <Slider players={players as Players} togglePlay={toggle as ToggleFunc} />
       <BlackBlock />
       <StepsBlock />
@@ -118,6 +124,18 @@ let defaultSources: Sources = {
   slider_5: {
     audio: new Audio(Audio6Src),
   },
+  second_market: {
+    audio: new Audio(AudioSecondMarketSrc),
+  },
+  second_base: {
+    audio: new Audio(AudioSecondColdBaseSrc),
+  },
+  second_couriers: {
+    audio: new Audio(AudioSecondCouriersSrc),
+  },
+  second_eco: {
+    audio: new Audio(AudioSecondEcoSrc),
+  },
 };
 
 const defaultPlayers: Players = {
@@ -128,6 +146,10 @@ const defaultPlayers: Players = {
   slider_3: { playing: false },
   slider_4: { playing: false },
   slider_5: { playing: false },
+  second_market: { playing: false },
+  second_base: { playing: false },
+  second_couriers: { playing: false },
+  second_eco: { playing: false },
 };
 
 const useNewMultiAudio = () => {
