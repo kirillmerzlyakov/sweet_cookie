@@ -130,43 +130,47 @@ export const SecondBlock: React.FC = () => (
 
         <div className={cn(s.step, s.step4)}>
           <div className={s.stepTitle}>
-            Внедрение голосового бота для маркетингового агентства Flow Agency
+            Голосовой бот в интернет-магазин товаров для экологичной уборки
           </div>
           <div className={s.stepdescription}>
-            Делегирование рутинного процесса обзвона клиентов с менеджеров
-            на робота VOICIA
+            Активировали «спящую» клиентскую базу и вырастили средний чек на
+            67%.
           </div>
           <div className={s.itemsWrapper}>
             <div className={s.row}>
-              {renderSmallItem("600", <>звонков/день 3&nbsp;менеджера</>)}
               {renderSmallItem(
-                "22%",
+                "10000",
+                <>
+                  звонков <br />в месяц
+                </>
+              )}
+              {renderSmallItem(
+                "5.5%",
                 <>
                   процент
                   <br />
                   конверсии
                 </>
               )}
-              {renderSmallItem("32₽", "цена участника вебинара")}
+              {renderSmallItem("4500₽", "средний чек")}
             </div>
             <div className={s.row}>
               {renderItem(
-                "6000",
+                "25975",
                 <>
                   звонков
-                  <br />
-                  за&nbsp;полчаса
+                  <br />в месяц
                 </>
               )}
               {renderItem(
-                "19%",
+                "9.69%",
                 <>
                   процент
                   <br />
                   конверсии
                 </>
               )}
-              {renderItem("19₽", "цена участника вебинара")}
+              {renderItem("7500₽", "средний чек")}
             </div>
           </div>
           <div className={s.play}>{triangle("#fff")}</div>
