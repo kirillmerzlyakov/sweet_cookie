@@ -37,7 +37,7 @@ export const Header: React.FC = () => {
         {renderTile(<>тарифы</>, TARIFF_BLOCK_ID)}
         {renderTile(<>заказать&nbsp;разработку</>, FORM_BLOCK_ID)}
       </div>
-      <a href={VOICIA_URL} rel="noreferrer">
+      <a href={VOICIA_URL} rel="noreferrer" target="_blank">
         <div className={s.signIn}>войти</div>
       </a>
       <div
@@ -97,7 +97,7 @@ export const Header: React.FC = () => {
             заказать&nbsp;разработку
           </div>
 
-          <a href={VOICIA_URL} rel="noreferrer">
+          <a href={VOICIA_URL} rel="noreferrer" target="_blank">
             <div className={cn(s.kebabMenuItem, s.kebabMenuItemSignIn)}>
               войти
             </div>
