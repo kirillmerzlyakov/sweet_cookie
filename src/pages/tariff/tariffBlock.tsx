@@ -77,7 +77,7 @@ export const TariffBlock: React.FC = () => (
             </div>
 
             <div className={s.featureWrapper}>
-              <div className={s.featureTitle}>преимущетсва кастома</div>
+              <div className={s.featureTitle}>преимущества кастома</div>
               <div className={s.featuredescription}>
                 сложные сценарии коммуникации с клиентами, большая база
                 вопросов/ответов
