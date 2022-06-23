@@ -12,8 +12,8 @@
         a[o + r].f = (a[o + r].f || []).concat([f]);
       }),
     a[o + r]({
-      id: "946750",
-      hash: "dffd940e863be65b6b20dd7071946b6e",
+      id: "948589",
+      hash: "e63492ed01c30d1dc1c047d8626cdcfe",
       locale: "ru",
     }),
     (a[o + m] =
