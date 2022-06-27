@@ -22,43 +22,29 @@ export const SecondBlock: React.FC<Props> = (props) => {
         <div className={s.stepsRow}>
           <div className={cn(s.step, s.step1)}>
             <div className={s.stepTitle}>
-              Внедрение голосового бота для маркетингового агентства Flow Agency
+              Собираем совместный вебинар с&nbsp;UIS на&nbsp;тему маркетинга
+              и&nbsp;продвижения
             </div>
             <div className={s.stepdescription}>
-              Делегирование рутинного процесса обзвона клиентов с менеджеров
-              на робота VOICIA
+              Ранее собирали емейл рассылками и&nbsp;другими классическими
+              методами
             </div>
             <div className={s.itemsWrapper}>
               <div className={s.row}>
-                {renderSmallItem("600", <>звонков/день 3&nbsp;менеджера</>)}
-                {renderSmallItem(
-                  "22%",
+                {renderItem("873", <>регистрации на&nbsp;вебинар</>)}
+                {renderItem(
+                  "254",
                   <>
-                    процент
+                    живых
                     <br />
-                    конверсии
+                    участника
                   </>
                 )}
-                {renderSmallItem("32₽", "цена участника вебинара")}
               </div>
               <div className={s.row}>
-                {renderItem(
-                  "6000",
-                  <>
-                    звонков
-                    <br />
-                    за&nbsp;полчаса
-                  </>
-                )}
-                {renderItem(
-                  "19%",
-                  <>
-                    процент
-                    <br />
-                    конверсии
-                  </>
-                )}
-                {renderItem("19₽", "цена участника вебинара")}
+                {renderItem("17277", "совершенных диалогов")}
+                {renderItem("4.8%", <>конверсии в&nbsp;регистрацию</>)}
+                {renderItem("66₽", <>цена записи на&nbsp;вебинар</>)}
               </div>
             </div>
             {renderPlayButton("second_market", players, togglePlay)}
