@@ -41,8 +41,8 @@ export const MainPage: React.FC = () => {
             <div className={s.title}>{voiciaLogo()}</div>
             <div className={s.subtitle}>интеллектуальный голосовой робот</div>
             <div className={s.description1}>
-              интеллектуальный голосовой робот, который работает с клиентами от
-              первого звонка до получения денег
+              запусти голосового робота за 3 рабочих дня и&nbsp;подними прибыль
+              до 3-x раз без увеличения затрат
             </div>
             <div className={s.buttons}>
               <div className={s.button} onClick={() => scrollTo(FORM_BLOCK_ID)}>
@@ -55,7 +55,7 @@ export const MainPage: React.FC = () => {
                 {triangle(
                   (players as Players)["main"].playing ? "#b0d1fb" : undefined
                 )}
-                &nbsp; познакомиться с voicia
+                &nbsp; послушать voicia
               </div>
             </div>
           </div>
