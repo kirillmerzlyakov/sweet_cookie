@@ -46,7 +46,7 @@ export const MainPage: React.FC = () => {
             </div>
             <div className={s.buttons}>
               <div className={s.button} onClick={() => scrollTo(FORM_BLOCK_ID)}>
-                собрать робота
+                заказать робота
               </div>
               <div
                 className={cn(s.button, s.buttonWhite)}
@@ -60,15 +60,15 @@ export const MainPage: React.FC = () => {
             </div>
           </div>
           <div className={s.right}>
-            снизьте издержки на поддержку клиентов и продаже до{" "}
-            <span className={s.discont}>-50%</span>
+            <span className={s.discont}>98%</span> собеседников думают, что
+            говорят с&nbsp;человеком
           </div>
         </div>
         <div className={s.bgImg} />
         <div className={s.marquee}>
           <Marquee speed={70} gradient={false}>
-            снизьте издержки на поддержку клиентов и продаже до -50%.&nbsp;
-            снизьте издержки на поддержку клиентов и продаже до -50%.&nbsp;
+            98% собеседников думают, что говорят с человеком.&nbsp;
+            98% собеседников думают, что говорят с человеком.&nbsp;
           </Marquee>
         </div>
       </div>
