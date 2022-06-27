@@ -47,7 +47,7 @@ export const SecondBlock: React.FC<Props> = (props) => {
                 {renderItem("66₽", <>цена записи на&nbsp;вебинар</>)}
               </div>
             </div>
-            {renderPlayButton("second_market", players, togglePlay)}
+            {renderPlayButton("second_uis", players, togglePlay)}
           </div>
 
           <div className={cn(s.step, s.step2)}>

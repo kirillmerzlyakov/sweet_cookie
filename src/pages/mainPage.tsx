@@ -23,7 +23,7 @@ import Audio4Src from "../media/audio/slider_consultation_client.mp3";
 import Audio5Src from "../media/audio/slider_polls.mp3";
 import Audio6Src from "../media/audio/slider_staff.mp3";
 
-import AudioSecondMarketSrc from "../media/audio/second_market.mp3";
+import AudioSecondMarketSrc from "../media/audio/second_uis.mp3";
 import AudioSecondColdBaseSrc from "../media/audio/second_cold_base.mp3";
 import AudioSecondCouriersSrc from "../media/audio/second_couriers.mp3";
 import AudioSecondEcoSrc from "../media/audio/second_eco.mp3";
@@ -127,7 +127,7 @@ let defaultSources: Sources = {
   slider_6: {
     audio: new Audio(Audio6Src),
   },
-  second_market: {
+  second_uis: {
     audio: new Audio(AudioSecondMarketSrc),
   },
   second_base: {
@@ -149,7 +149,7 @@ const defaultPlayers: Players = {
   slider_4: { playing: false },
   slider_5: { playing: false },
   slider_6: { playing: false },
-  second_market: { playing: false },
+  second_uis: { playing: false },
   second_base: { playing: false },
   second_couriers: { playing: false },
   second_eco: { playing: false },
