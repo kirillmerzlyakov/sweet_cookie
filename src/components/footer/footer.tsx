@@ -28,9 +28,9 @@ export const Footer = () => (
       </div>
       <div className={s.logo}>
         <div className={s.logoText}>
-          Политика конфеденциальности
-          <br />
-          ©voicia, 2022
+          <div><a href={'https://drive.google.com/file/d/1T_HTQ4WXgtUUugQn9kuxBqLJz7r8E04w/view'} target={'_blank'} className={s.textWhite}>Публичная оферта</a></div>
+          <div>Политика конфиденциальности</div>
+          <div>©voicia, 2022</div>
         </div>
       </div>
     </div>
