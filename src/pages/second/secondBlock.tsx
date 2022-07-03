@@ -43,7 +43,7 @@ export const SecondBlock: React.FC<Props> = (props) => {
                 )}
               </div>
               <div className={s.row}>
-                {renderItem("17  277", "совершенных диалогов")}
+                {renderItem("17 277", "совершенных диалогов")}
                 {renderItem("4.8%", <>конверсии в&nbsp;регистрацию</>)}
                 {renderItem("66₽", <>цена записи на&nbsp;вебинар</>)}
               </div>
@@ -69,14 +69,14 @@ export const SecondBlock: React.FC<Props> = (props) => {
             <div className={s.itemsWrapper}>
               <div className={s.row}>
                 {renderSmallItem(
-                  "5  000",
+                  "5 000",
                   <>звонков/день 25&nbsp;менеджеров</>
                 )}
                 {renderSmallItem("410₽", "цена заявки")}
               </div>
               <div className={s.row}>
                 {renderItem(
-                  "30  000",
+                  "30 000",
                   <>
                     звонков/день
                     <br />1 робот
@@ -107,7 +107,7 @@ export const SecondBlock: React.FC<Props> = (props) => {
                   "8%",
                   <>конверсия в соискателя на&nbsp;поиске</>
                 )}
-                {renderSmallItem("2  000", "звонков/день 10 менеджеров")}
+                {renderSmallItem("2 000", "звонков/день 10 менеджеров")}
               </div>
               <div className={s.row}>
                 {renderItem("10%", <>конверсия в соискателя на&nbsp;поиске</>)}
@@ -135,7 +135,7 @@ export const SecondBlock: React.FC<Props> = (props) => {
             </div>
             <div className={s.itemsWrapper}>
               <div className={s.row}>
-                {renderSmallItem("10  000", callsInMonth())}
+                {renderSmallItem("10 000", callsInMonth())}
                 {renderSmallItem(
                   "5.5%",
                   <>
@@ -144,10 +144,10 @@ export const SecondBlock: React.FC<Props> = (props) => {
                     конверсии
                   </>
                 )}
-                {renderSmallItem("4  500₽", "средний чек")}
+                {renderSmallItem("4 500₽", "средний чек")}
               </div>
               <div className={s.row}>
-                {renderItem("25  975", callsInMonth())}
+                {renderItem("25 975", callsInMonth())}
                 {renderItem(
                   "9.69%",
                   <>
@@ -156,7 +156,7 @@ export const SecondBlock: React.FC<Props> = (props) => {
                     конверсии
                   </>
                 )}
-                {renderItem("7  500₽", "средний чек")}
+                {renderItem("7 500₽", "средний чек")}
               </div>
             </div>
             {renderPlayButton("second_eco", players, togglePlay, true)}
@@ -224,10 +224,10 @@ const renderMoreCases = (props: Props) => {
         <div className={s.itemsWrapper}>
           <div className={s.row}>
             {renderItem("519", "лидов всего")}
-            {renderItem("437  788₽", "сумма сделок")}
+            {renderItem("437 788₽", "сумма сделок")}
           </div>
           <div className={s.row}>
-            {renderItem("20  847₽", "средний чек")}
+            {renderItem("20 847₽", "средний чек")}
             {renderItem("4.05%", "конверсия")}
           </div>
         </div>
@@ -297,7 +297,7 @@ const renderMoreCases = (props: Props) => {
         </div>
         <div className={s.itemsWrapper}>
           <div className={s.row}>
-            {renderItem("1  249", "совершённых диалогов")}
+            {renderItem("1 249", "совершённых диалогов")}
             {renderItem("66", "теплых заявок получено")}
           </div>
           <div className={s.row}>
@@ -308,7 +308,7 @@ const renderMoreCases = (props: Props) => {
                 потрачено
               </>
             )}
-            {renderItem("4  880₽", "стоимость обзвона")}
+            {renderItem("4 880₽", "стоимость обзвона")}
           </div>
         </div>
         {renderPlayButton("second_lead_generation", players, togglePlay, true)}
