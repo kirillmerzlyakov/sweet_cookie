@@ -16,6 +16,7 @@ interface Props {
 
 export const SecondBlock: React.FC<Props> = (props) => {
   const { players, togglePlay } = props;
+  const [showMoreCases, setShowMoreCases] = React.useState(false);
   return (
     <div className={s.tariffBlock} id={SECOND_BLOCK_ID}>
       <div className={s.wrapperSteps}>
@@ -26,7 +27,7 @@ export const SecondBlock: React.FC<Props> = (props) => {
               и&nbsp;продвижения
             </div>
             <div className={s.stepdescription}>
-              Ранее собирали емейл рассылками и&nbsp;другими классическими
+              Ранее собирали email-рассылками и&nbsp;другими классическими
               методами
             </div>
             <div className={s.itemsWrapper}>
@@ -42,7 +43,7 @@ export const SecondBlock: React.FC<Props> = (props) => {
                 )}
               </div>
               <div className={s.row}>
-                {renderItem("17277", "совершенных диалогов")}
+                {renderItem("17  277", "совершенных диалогов")}
                 {renderItem("4.8%", <>конверсии в&nbsp;регистрацию</>)}
                 {renderItem("66₽", <>цена записи на&nbsp;вебинар</>)}
               </div>
@@ -67,12 +68,15 @@ export const SecondBlock: React.FC<Props> = (props) => {
 
             <div className={s.itemsWrapper}>
               <div className={s.row}>
-                {renderSmallItem("5000", <>звонков/день 25&nbsp;менеджеров</>)}
+                {renderSmallItem(
+                  "5  000",
+                  <>звонков/день 25&nbsp;менеджеров</>
+                )}
                 {renderSmallItem("410₽", "цена заявки")}
               </div>
               <div className={s.row}>
                 {renderItem(
-                  "30000",
+                  "30  000",
                   <>
                     звонков/день
                     <br />1 робот
@@ -103,7 +107,7 @@ export const SecondBlock: React.FC<Props> = (props) => {
                   "8%",
                   <>конверсия в соискателя на&nbsp;поиске</>
                 )}
-                {renderSmallItem("2000", "звонков/день 10 менеджеров")}
+                {renderSmallItem("2  000", "звонков/день 10 менеджеров")}
               </div>
               <div className={s.row}>
                 {renderItem("10%", <>конверсия в соискателя на&nbsp;поиске</>)}
@@ -127,16 +131,11 @@ export const SecondBlock: React.FC<Props> = (props) => {
             </div>
             <div className={s.stepdescription}>
               Активировали «спящую» клиентскую базу и вырастили средний чек на
-              67%.
+              67%
             </div>
             <div className={s.itemsWrapper}>
               <div className={s.row}>
-                {renderSmallItem(
-                  "10000",
-                  <>
-                    звонков <br />в месяц
-                  </>
-                )}
+                {renderSmallItem("10  000", callsInMonth())}
                 {renderSmallItem(
                   "5.5%",
                   <>
@@ -145,16 +144,10 @@ export const SecondBlock: React.FC<Props> = (props) => {
                     конверсии
                   </>
                 )}
-                {renderSmallItem("4500₽", "средний чек")}
+                {renderSmallItem("4  500₽", "средний чек")}
               </div>
               <div className={s.row}>
-                {renderItem(
-                  "25975",
-                  <>
-                    звонков
-                    <br />в месяц
-                  </>
-                )}
+                {renderItem("25  975", callsInMonth())}
                 {renderItem(
                   "9.69%",
                   <>
@@ -163,16 +156,22 @@ export const SecondBlock: React.FC<Props> = (props) => {
                     конверсии
                   </>
                 )}
-                {renderItem("7500₽", "средний чек")}
+                {renderItem("7  500₽", "средний чек")}
               </div>
             </div>
             {renderPlayButton("second_eco", players, togglePlay, true)}
           </div>
         </div>
+        {showMoreCases && renderMoreCases(props)}
         <div className={s.buttons}>
-          <div className={s.button}>
-            <div className={s.arrowBox}>{arrowDown()}</div>
-            &nbsp;&nbsp;больше кейсов
+          <div
+            className={s.button}
+            onClick={() => setShowMoreCases(!showMoreCases)}
+          >
+            <div className={cn(s.arrowBox, showMoreCases && s.arrowBoxRotate)}>
+              {arrowDown()}
+            </div>
+            &nbsp;&nbsp;{showMoreCases ? "свернуть кейсы" : "больше кейсов"}
           </div>
         </div>
       </div>
@@ -208,4 +207,119 @@ const renderSmallItem = (title: string, subtitle: string | JSX.Element) => (
     <div className={s.itemSmallTitle}>{title}</div>
     <div className={s.itemSubtitle}>{subtitle}</div>
   </div>
+);
+
+const renderMoreCases = (props: Props) => {
+  const { players, togglePlay } = props;
+
+  return (
+    <div className={s.stepsRow}>
+      <div className={cn(s.step, s.narrowStep, s.step4)}>
+        <div className={s.stepTitle}>
+          Горячие лиды для продажи онлайн-курсов при помощи бота Voicia
+        </div>
+        <div className={s.stepdescription} style={{ width: "285px" }}>
+          Собрали вебинар, обзвонили его участников и совершили 21 сделку
+        </div>
+        <div className={s.itemsWrapper}>
+          <div className={s.row}>
+            {renderItem("519", "лидов всего")}
+            {renderItem("437  788₽", "сумма сделок")}
+          </div>
+          <div className={s.row}>
+            {renderItem("20  847₽", "средний чек")}
+            {renderItem("4.05%", "конверсия")}
+          </div>
+        </div>
+        {renderPlayButton("second_couriers", players, togglePlay)}
+      </div>
+
+      <div className={cn(s.step, s.narrowStep, s.step2)}>
+        <div className={s.stepTitle}>
+          Робот в отдел техподдержки для оператора услуг связи
+        </div>
+        <div className={s.stepdescription}>
+          Научили бота решать проблемы пользователей и снизили стоимость
+          закрытой заявки на 8%
+        </div>
+        <div className={s.itemsWrapper}>
+          <div className={s.row}>
+            {renderSmallItem("600", callsInMonth())}
+            {renderSmallItem(
+              "73%",
+              <>
+                процент
+                <br />
+                решённых
+                <br />
+                заявок
+              </>
+            )}
+            {renderSmallItem(
+              "8.4₽",
+              <>
+                стоимость
+                <br />1 заявки
+              </>
+            )}
+          </div>
+          <div className={s.row}>
+            {renderItem("700", callsInMonth())}
+            {renderItem(
+              "79.9%",
+              <>
+                процент
+                <br />
+                решённых
+                <br />
+                заявок
+              </>
+            )}
+            {renderItem(
+              "7,78₽",
+              <>
+                стоимость
+                <br />1 заявки
+              </>
+            )}
+          </div>
+        </div>
+        {renderPlayButton("second_eco", players, togglePlay)}
+      </div>
+
+      <div className={cn(s.step, s.narrowStep, s.step1)}>
+        <div className={s.stepTitle}>
+          Лидогенерация для бухгалтерского аутсорсинга
+        </div>
+        <div className={s.stepdescription}>
+          Ежедневно обзваниваем базу вновь образованных юрлиц Москвы и приводим
+          от 40 лидов в день по 74₽
+        </div>
+        <div className={s.itemsWrapper}>
+          <div className={s.row}>
+            {renderItem("1  249", "совершённых диалогов")}
+            {renderItem("66", "теплых заявок получено")}
+          </div>
+          <div className={s.row}>
+            {renderItem(
+              "610.5",
+              <>
+                минут <br />
+                потрачено
+              </>
+            )}
+            {renderItem("4  880₽", "стоимость обзвона")}
+          </div>
+        </div>
+        {renderPlayButton("second_eco", players, togglePlay, true)}
+      </div>
+    </div>
+  );
+};
+
+const callsInMonth = () => (
+  <>
+    звонков
+    <br />в месяц
+  </>
 );
