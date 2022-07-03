@@ -227,7 +227,7 @@ const renderMoreCases = (props: Props) => {
             {renderItem("437 788₽", "сумма сделок")}
           </div>
           <div className={s.row}>
-            {renderItem("20 847₽", "средний чек")}
+            {renderItem("20.8К₽", "средний чек")}
             {renderItem("4.05%", "конверсия")}
           </div>
         </div>
