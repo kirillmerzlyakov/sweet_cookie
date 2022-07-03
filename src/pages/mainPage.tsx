@@ -27,6 +27,10 @@ import AudioSecondMarketSrc from "../media/audio/second_uis.mp3";
 import AudioSecondColdBaseSrc from "../media/audio/second_cold_base.mp3";
 import AudioSecondCouriersSrc from "../media/audio/second_couriers.mp3";
 import AudioSecondEcoSrc from "../media/audio/second_eco.mp3";
+import AudioSecondHotLeadsSrc from "../media/audio/second_hot_leads.mp3";
+import AudioSecondServiceLinkSrc from "../media/audio/second_service_link.mp3";
+import AudioSecondLeadGenerationsSrc from "../media/audio/second_lead_generation.mp3";
+
 
 export const MainPage: React.FC = () => {
   const [players, toggle] = useNewMultiAudio();
@@ -139,6 +143,15 @@ let defaultSources: Sources = {
   second_eco: {
     audio: new Audio(AudioSecondEcoSrc),
   },
+  second_hot_leads: {
+    audio: new Audio(AudioSecondHotLeadsSrc),
+  },
+  second_service_link: {
+    audio: new Audio(AudioSecondServiceLinkSrc),
+  },
+  second_lead_generation: {
+    audio: new Audio(AudioSecondLeadGenerationsSrc),
+  },
 };
 
 const defaultPlayers: Players = {
@@ -153,6 +166,9 @@ const defaultPlayers: Players = {
   second_base: { playing: false },
   second_couriers: { playing: false },
   second_eco: { playing: false },
+  second_hot_leads: { playing: false },
+  second_service_link: { playing: false },
+  second_lead_generation: { playing: false },
 };
 
 const useNewMultiAudio = () => {

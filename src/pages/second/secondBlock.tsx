@@ -231,7 +231,7 @@ const renderMoreCases = (props: Props) => {
             {renderItem("4.05%", "конверсия")}
           </div>
         </div>
-        {renderPlayButton("second_couriers", players, togglePlay)}
+        {renderPlayButton("second_hot_leads", players, togglePlay)}
       </div>
 
       <div className={cn(s.step, s.narrowStep, s.step2)}>
@@ -284,7 +284,7 @@ const renderMoreCases = (props: Props) => {
             )}
           </div>
         </div>
-        {renderPlayButton("second_eco", players, togglePlay)}
+        {renderPlayButton("second_service_link", players, togglePlay)}
       </div>
 
       <div className={cn(s.step, s.narrowStep, s.step1)}>
@@ -311,7 +311,7 @@ const renderMoreCases = (props: Props) => {
             {renderItem("4  880₽", "стоимость обзвона")}
           </div>
         </div>
-        {renderPlayButton("second_eco", players, togglePlay, true)}
+        {renderPlayButton("second_lead_generation", players, togglePlay, true)}
       </div>
     </div>
   );
