@@ -276,7 +276,7 @@ const renderMoreCases = (props: Props) => {
               </>
             )}
             {renderItem(
-              "7,78₽",
+              "7.78₽",
               <>
                 стоимость
                 <br />1 заявки
