@@ -78,12 +78,19 @@
     width: calc(33% - 26px);
     max-width: 454px;
     min-width: 340px;
+    opacity: 0;
+    animation: ani 1s forwards;
     .stepTitle {
       font-size: 25px;
     }
     .stepdescription {
       width: 100%;
     }
+  }
+
+  @keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
   }
 
   .step1 {
