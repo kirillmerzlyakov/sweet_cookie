@@ -6,8 +6,10 @@ import Img2 from "../../media/man2.png";
 import Img2_mobile from "../../media/step2_mobile.png";
 import { arrowDown, triangle } from "../../media/mediaSVG";
 import { Players } from "../mainPage";
+import { scrollTo } from "../../components/shared";
 
 export const SECOND_BLOCK_ID = "second-block-id";
+export const FIRST_NARROW_BLOCK_ID = "first_narrow_step";
 
 interface Props {
   players: Players;
@@ -68,10 +70,7 @@ export const SecondBlock: React.FC<Props> = (props) => {
 
             <div className={s.itemsWrapper}>
               <div className={s.row}>
-                {renderSmallItem(
-                  "5 000",
-                  <>звонков/день 25&nbsp;менеджеров</>
-                )}
+                {renderSmallItem("5 000", <>звонков/день 25&nbsp;менеджеров</>)}
                 {renderSmallItem("410₽", "цена заявки")}
               </div>
               <div className={s.row}>
@@ -166,7 +165,14 @@ export const SecondBlock: React.FC<Props> = (props) => {
         <div className={s.buttons}>
           <div
             className={s.button}
-            onClick={() => setShowMoreCases(!showMoreCases)}
+            onClick={() => {
+              if (!showMoreCases) {
+                setTimeout(() => {
+                  scrollTo(FIRST_NARROW_BLOCK_ID, "center");
+                }, 100);
+              }
+              setShowMoreCases(!showMoreCases);
+            }}
           >
             <div className={cn(s.arrowBox, showMoreCases && s.arrowBoxRotate)}>
               {arrowDown()}
@@ -214,7 +220,10 @@ const renderMoreCases = (props: Props) => {
 
   return (
     <div className={s.stepsRow}>
-      <div className={cn(s.step, s.narrowStep, s.step4)}>
+      <div
+        className={cn(s.step, s.narrowStep, s.step4)}
+        id={FIRST_NARROW_BLOCK_ID}
+      >
         <div className={s.stepTitle}>
           Горячие лиды для продажи онлайн-курсов при помощи бота Voicia
         </div>
