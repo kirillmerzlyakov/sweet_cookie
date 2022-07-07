@@ -20,28 +20,28 @@ export const CompaniesBlock: React.FC = () => (
     <Marquee speed={100} gradient={false}>
       <div className={s.marquee}>
         <div className={s.marqueeItem}>
-          <img src={SamokatImg} alt="Самокат"></img>
+          <img src={SamokatImg} alt="cамокат"></img>
         </div>
         <div className={s.marqueeItem}>
-          <img src={ElamaImg} alt="Elama"></img>
+          <img src={ElamaImg} alt="elama"></img>
         </div>
         <div className={s.marqueeItem}>
-          <img src={KotImg} alt="Кот"></img>
+          <img src={KotImg} alt="чистокот.ру"></img>
         </div>
         <div className={s.marqueeItem}>
-          <img src={FlowImg} alt="Flow"></img>
+          <img src={FlowImg} alt="flow agency"></img>
         </div>
         <div className={s.marqueeItem}>
-          <img src={SamokatImg} alt="Самокат"></img>
+          <img src={SamokatImg} alt="самокат"></img>
         </div>
         <div className={s.marqueeItem}>
-          <img src={ElamaImg} alt="Elama"></img>
+          <img src={ElamaImg} alt="elama"></img>
         </div>
         <div className={s.marqueeItem}>
-          <img src={KotImg} alt="Кот"></img>
+          <img src={KotImg} alt="чистокот.ру"></img>
         </div>
         <div className={s.marqueeItem}>
-          <img src={FlowImg} alt="Flow"></img>
+          <img src={FlowImg} alt="flow agency"></img>
         </div>
       </div>
     </Marquee>

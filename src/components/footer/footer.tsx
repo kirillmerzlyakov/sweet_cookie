@@ -34,7 +34,7 @@ export const Footer = () => (
       </div>
     </div>
     <div className={s.img}>
-      <img src={RobotImg} alt=""></img>
+      <img src={RobotImg} alt="voicia robot"></img>
     </div>
   </div>
 );
