@@ -64,8 +64,8 @@ export const SecondBlock: React.FC<Props> = (props) => {
             <div className={s.img1}>
               <img
                 src={window.screen.availWidth > 1024 ? Img2 : Img2_mobile}
-                alt="man1"
-              ></img>
+                alt="Лидогенерация холодной базы для Агентства Недвижимости"
+              />
             </div>
 
             <div className={s.itemsWrapper}>
@@ -98,7 +98,10 @@ export const SecondBlock: React.FC<Props> = (props) => {
               в соискателя
             </div>
             <div className={s.img2}>
-              <img src={Img1} alt="man1"></img>
+              <img
+                src={Img1}
+                alt="Массовый набор курьеров с кадрового резерва для Самоката"
+              />
             </div>
             <div className={s.itemsWrapper}>
               <div className={s.row}>
