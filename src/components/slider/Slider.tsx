@@ -18,6 +18,7 @@ interface Slide {
   subtitle: string | JSX.Element;
   text: JSX.Element;
   audio_key: string;
+  alt: string;
 }
 
 const slides: Slide[] = [
@@ -32,6 +33,7 @@ const slides: Slide[] = [
       </>
     ),
     audio_key: "slider_1",
+    alt: "работа с холодными звонками",
   },
   {
     img: Img2,
@@ -43,6 +45,7 @@ const slides: Slide[] = [
       </>
     ),
     audio_key: "slider_2",
+    alt: "работа с заявками и их квалификация",
   },
   {
     img: Img3,
@@ -55,6 +58,7 @@ const slides: Slide[] = [
       </>
     ),
     audio_key: "slider_3",
+    alt: "автоматизация сервисных звонков",
   },
   {
     img: Img4,
@@ -66,10 +70,11 @@ const slides: Slide[] = [
       </>
     ),
     audio_key: "slider_4",
+    alt: "консультация клиентов",
   },
   {
     img: Img5,
-    subtitle: <>опросы и&nbsp;исследования </>,
+    subtitle: <>опросы и&nbsp;исследования</>,
     text: (
       <>
         проведет массовое исследование любой сложности в&nbsp;краткие сроки
@@ -77,6 +82,7 @@ const slides: Slide[] = [
       </>
     ),
     audio_key: "slider_5",
+    alt: "опросы и исследования",
   },
   {
     img: Img6,
@@ -89,6 +95,7 @@ const slides: Slide[] = [
       </>
     ),
     audio_key: "slider_6",
+    alt: "массовый подбор персонала",
   },
 ];
 
@@ -129,7 +136,7 @@ export const Slider: React.FC<SliderProps> = (props) => {
               }
             >
               <div className={s.slideImg}>
-                <img src={slide.img} alt="картинка" />
+                <img src={slide.img} alt={slide.alt} />
               </div>
             </div>
             <div
