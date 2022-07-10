@@ -1,9 +1,9 @@
 import React from "react";
 import s from "./secondBlock.module.less";
 import cn from "classnames";
-import Img1 from "../../media/man1.png";
-import Img2 from "../../media/man2.png";
-import Img2_mobile from "../../media/step2_mobile.png";
+import Img1 from "../../media/man1.webp";
+import Img2 from "../../media/man2.webp";
+import Img2_mobile from "../../media/step2_mobile.webp";
 import { arrowDown, triangle } from "../../media/mediaSVG";
 import { Players } from "../mainPage";
 import { scrollTo } from "../../components/shared";
