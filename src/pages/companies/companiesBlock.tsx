@@ -1,10 +1,10 @@
 import React from "react";
 import s from "./companiesBlock.module.less";
 import Marquee from "react-fast-marquee";
-import SamokatImg from "./../../media/images/brands/samokat.png";
-import KotImg from "./../../media/images/brands/kot.png";
-import ElamaImg from "./../../media/images/brands/elama.png";
-import FlowImg from "./../../media/images/brands/flow.png";
+import SamokatImg from "./../../media/images/brands/samokat.webp";
+import KotImg from "./../../media/images/brands/kot.webp";
+import ElamaImg from "./../../media/images/brands/elama.webp";
+import FlowImg from "./../../media/images/brands/flow.webp";
 
 export const COMPANIES_BLOCK_ID = "second-block-id";
 
