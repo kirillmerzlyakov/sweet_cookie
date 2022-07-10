@@ -36,13 +36,3 @@ code {
   font-weight: normal;
   font-display: swap
 }
-
-@font-face {
-  font-family: "Value Sans Pro Black";
-  src: url("./fonts/ValueSansPro/ValueSansProBlack.woff") format("woff");
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap
-}
-
-
