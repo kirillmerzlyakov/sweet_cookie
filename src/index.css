@@ -17,6 +17,7 @@ code {
   src: url("./fonts/ValueSansPro/ValueSansProRegular.woff") format("woff");
   font-style: normal;
   font-weight: normal;
+  font-display: swap
 }
 
 @font-face {
@@ -24,6 +25,7 @@ code {
   src: url("./fonts/ValueSansPro/ValueSansProBold.woff") format("woff");
   font-style: normal;
   font-weight: normal;
+  font-display: swap
 }
 
 @font-face {
@@ -31,6 +33,7 @@ code {
   src: url("./fonts/ValueSansPro/ValueSansProMedium.woff") format("woff");
   font-style: normal;
   font-weight: normal;
+  font-display: swap
 }
 
 @font-face {
@@ -38,6 +41,7 @@ code {
   src: url("./fonts/ValueSansPro/ValueSansProBlack.woff") format("woff");
   font-style: normal;
   font-weight: normal;
+  font-display: swap
 }
 
 
