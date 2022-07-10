@@ -6,7 +6,7 @@
     ExpiresByType image/png "access plus 1 days"
     ExpiresByType image/gif "access plus 1 days"
     ExpiresByType image/webp "access plus 1 days"
-    ExpiresByType video/mp3 "access plus 1 days"
+    ExpiresByType audio/mp3 "access plus 1 days"
     ExpiresByType application/x-shockwave-flash "access plus 1 days"
     #кэшировать css, javascript и текстовые файлы на одну неделю
     ExpiresByType text/css "access plus 1 days"
