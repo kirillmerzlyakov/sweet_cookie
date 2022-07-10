@@ -28,13 +28,23 @@ export const Footer = () => (
       </div>
       <div className={s.logo}>
         <div className={s.logoText}>
-          <div><a href={'https://drive.google.com/file/d/1T_HTQ4WXgtUUugQn9kuxBqLJz7r8E04w/view'} target={'_blank'} className={s.textWhite}>Публичная оферта</a></div>
+          <div>
+            <a
+              href={
+                "https://drive.google.com/file/d/1T_HTQ4WXgtUUugQn9kuxBqLJz7r8E04w/view"
+              }
+              target={"_blank"}
+              className={s.textWhite}
+            >
+              Публичная оферта
+            </a>
+          </div>
           <div>Все права защищены. ©voicia, 2022</div>
         </div>
       </div>
     </div>
     <div className={s.img}>
-      <img src={RobotImg} alt="voicia robot"></img>
+      <img src={RobotImg} alt="voicia robot" width={256} height={316}></img>
     </div>
   </div>
 );
