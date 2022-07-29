@@ -31,7 +31,7 @@ export const Footer = () => (
           <div>
             <a
               href={
-                "https://drive.google.com/file/d/1T_HTQ4WXgtUUugQn9kuxBqLJz7r8E04w/view"
+                "https://drive.google.com/file/d/1VYbcLDHTbgZOmhuFn-mBqBSho4OOS5i6/view"
               }
               target={"_blank"}
               className={s.textWhite}
